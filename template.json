@@ -129,11 +129,11 @@
 						"isvisible": false,
 						"isfavorited": false
 					},
-					"awareness": {
+					"acting": {
 						"type": "talent",
 						"value": 0,
 						"max": 5,
-						"label": "wod.abilities.awareness",
+						"label": "wod.abilities.acting",
 						"altlabel": "",
 						"speciality": "",
 						"isvisible": false,
@@ -169,11 +169,11 @@
 						"isvisible": false,
 						"isfavorited": false
 					},
-					"expression": {
+					"dodge": {
 						"type": "talent",
 						"value": 0,
 						"max": 5,
-						"label": "wod.abilities.expression",
+						"label": "wod.abilities.dodge",
 						"altlabel": "",
 						"speciality": "",
 						"isvisible": false,
