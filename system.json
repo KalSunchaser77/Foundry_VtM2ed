@@ -1,8 +1,8 @@
 {
-  "id": "worldofdarkness",
-  "title": "World of Darkness 20th edition",
+  "id": "worldofdarkness-2e-saa",
+  "title": "World of Darkness 2nd edition (compatable)",
   "description": "To play World of Darkness 20th ed. Support for all the larger and most of the smaller games of the gameline. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. For more information please visit worldofdarkness.com.",
-  "version": "5.0.12",
+  "version": "5.0.12.2e.01",
   "compatibility": {
     "minimum": "13",
     "verified": "13",
