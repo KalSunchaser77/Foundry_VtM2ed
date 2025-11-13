@@ -139,11 +139,31 @@
 						"isvisible": false,
 						"isfavorited": false
 					},
+					"acting": {
+						"type": "talent",
+						"value": 0,
+						"max": 5,
+						"label": "wod.abilities.acting",
+						"altlabel": "",
+						"speciality": "",
+						"isvisible": false,
+						"isfavorited": false
+					},
 					"brawl": {
 						"type": "talent",
 						"value": 0,
 						"max": 5,
 						"label": "wod.abilities.brawl",
+						"altlabel": "",
+						"speciality": "",
+						"isvisible": false,
+						"isfavorited": false
+					},
+					"dodge": {
+						"type": "talent",
+						"value": 0,
+						"max": 5,
+						"label": "wod.abilities.dodge",
 						"altlabel": "",
 						"speciality": "",
 						"isvisible": false,
@@ -359,11 +379,31 @@
 						"isvisible": false,
 						"isfavorited": false
 					},
+					"music": {
+						"type": "skill",
+						"value": 0,
+						"max": 5,
+						"label": "wod.abilities.music",
+						"altlabel": "",
+						"speciality": "",
+						"isvisible": false,
+						"isfavorited": false
+					},
 					"performance": {
 						"type": "skill",
 						"value": 0,
 						"max": 5,
 						"label": "wod.abilities.performance",
+						"altlabel": "",
+						"speciality": "",
+						"isvisible": false,
+						"isfavorited": false
+					},
+					"repair": {
+						"type": "skill",
+						"value": 0,
+						"max": 5,
+						"label": "wod.abilities.repair",
 						"altlabel": "",
 						"speciality": "",
 						"isvisible": false,
