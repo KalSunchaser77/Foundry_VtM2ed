@@ -2,7 +2,7 @@
   "id": "vtm20-2e-saa",
   "title": "World of Darkness 20th - VtM 2e Skill Varient",
   "description": "To play World of Darkness 20th ed. Includes special support for VtM 2nd Ed. Support for all the larger and most of the smaller games of the gameline. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. For more information please visit worldofdarkness.com.",
-  "version": "0.1.2",
+  "version": "0.1.21",
   "compatibility": {
     "minimum": "13",
     "verified": "13",
@@ -42,12 +42,12 @@
     {
       "name": "lunarshapeshifting",
       "label": "Shapeshifting",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/lunarshapeshifting",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "lunar"
@@ -58,12 +58,12 @@
     {
       "name": "lunaraspects",
       "label": "Aspects",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/lunaraspects",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "lunar"
@@ -74,12 +74,12 @@
     {
       "name": "infernalshapeshifting",
       "label": "Shapeshifting",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/infernalshapeshifting",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "infernal"
@@ -90,12 +90,12 @@
     {
       "name": "infernalaspects",
       "label": "Aspects",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/infernalaspects",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "infernal"
@@ -106,12 +106,12 @@
     {
       "name": "devilbelform",
       "label": "Bel - Celestials",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/devilbelform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -123,12 +123,12 @@
     {
       "name": "devilnuskuform",
       "label": "Nusku - Flames",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/devilnuskuform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -140,12 +140,12 @@
     {
       "name": "devilqinguform",
       "label": "Qingu - Radience",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/devilqinguform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -157,12 +157,12 @@
     {
       "name": "scourgedaganform",
       "label": "Dagan - Awakening",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/scourgedaganform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -174,12 +174,12 @@
     {
       "name": "scourgeansharform",
       "label": "Anshar - Firmament",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/scourgeansharform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -191,12 +191,12 @@
     {
       "name": "scourgeellilform",
       "label": "Ellil - Wind",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/scourgeellilform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -208,12 +208,12 @@
     {
       "name": "malefactorkisharform",
       "label": "Kishar - Earth",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/malefactorkisharform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -225,12 +225,12 @@
     {
       "name": "malefactorantuform",
       "label": "Antu - Paths",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/malefactorantuform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -242,12 +242,12 @@
     {
       "name": "malefactormummuform",
       "label": "Mummu - Forge",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/malefactormummuform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -259,12 +259,12 @@
     {
       "name": "fiendninsunform",
       "label": "Ninsun - Patterns",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/fiendninsunform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -276,12 +276,12 @@
     {
       "name": "fiendneduform",
       "label": "Nedu - Portals",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/fiendneduform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -293,12 +293,12 @@
     {
       "name": "fiendshamashform",
       "label": "Shamash - Light",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/fiendshamashform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -310,12 +310,12 @@
     {
       "name": "defilerishharaform",
       "label": "Ishhara - Longing",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/defilerishharaform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -327,12 +327,12 @@
     {
       "name": "defileradadform",
       "label": "Adad - Storms",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/defileradadform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -344,12 +344,12 @@
     {
       "name": "defilermammetumform",
       "label": "Mammetum - Transfiguration",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/defilermammetumform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -361,12 +361,12 @@
     {
       "name": "devourerzaltuform",
       "label": "Zaltu - Beast",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/devourerzaltuform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -378,12 +378,12 @@
     {
       "name": "devourerninurtuform",
       "label": "Ninurtu - Wild",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/devourerninurtuform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -395,12 +395,12 @@
     {
       "name": "devoureraruruform",
       "label": "Aruru - Flesh",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/devoureraruruform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -412,12 +412,12 @@
     {
       "name": "slayernamtarform",
       "label": "Namtar - Death",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/slayernamtarform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -429,12 +429,12 @@
     {
       "name": "slayernergalform",
       "label": "Nergal - Spirit",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/slayernergalform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -446,12 +446,12 @@
     {
       "name": "slayerereshkigalform",
       "label": "Ereshkigal - Realms",
-      "system": "vtm20-2e-saa",
+      "system": "worldofdarkness",
       "path": "packs/slayerereshkigalform",
       "type": "Item",
       "private": false,
       "flags": {
-          "vtm20-2e-saa": {
+          "worldofdarkness": {
               "types": [
                 "creation",
                 "demon",
@@ -619,7 +619,7 @@
   "url": "https://github.com/KalSunchaser77/Foundry_VtM2ed",
   "bugs": "https://github.com/JohanFalt/Foundry_WoD20/issues",
   "changelog": "https://github.com/JohanFalt/Foundry_WoD20/wiki/Changelog",
-  "background": "systems/vtm20-2e-saa/assets/img/graphics/wod.png",
+  "background": "systems/worldofdarkness/assets/img/graphics/wod.png",
   "manifest": "https://raw.githubusercontent.com/KalSunchaser77/Foundry_VtM2ed/refs/heads/main/system.json",  
   "download": "https://github.com/KalSunchaser77/Foundry_VtM2ed/archive/refs/heads/main.zip",
   "license": "LICENSE.txt"
