@@ -198,7 +198,7 @@ export const dataability = {
                 "finance",
                 "investigation",
                 "law",
-                "linguistics"
+                "linguistics",
                 "medicine",
                 "occult",
                 "politics",
