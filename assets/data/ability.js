@@ -169,12 +169,12 @@ export const dataability = {
     "vampire": {
         "modern": {
             "talents": [
+                "acting",
                 "alertness",
                 "athletics", 
-                "awareness",
                 "brawl",
+                "dodge",
                 "empathy",
-                "expression",
                 "intimidation",
                 "leadership",
                 "streetwise",
@@ -182,27 +182,27 @@ export const dataability = {
             ],
             "skills": [
                 "animalken",
-                "craft",
                 "drive",
                 "etiquette",
                 "firearms",
-                "larceny",
                 "melee",
-                "performance",
+                "music",
+                "repair",
+                "security",
                 "stealth",
                 "survival"
             ],
             "knowledges": [
-                "academics",
+                "bureaucracy",
                 "computer",
                 "finance",
                 "investigation",
                 "law",
+                "linguistics"
                 "medicine",
                 "occult",
                 "politics",
                 "science",
-                "technology"
             ]
         },
         "victorian": {
