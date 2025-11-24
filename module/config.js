@@ -250,7 +250,8 @@ wod.attackRangedAbilities = {
     athletics: "wod.abilities.athletics",
     firearms: "wod.abilities.firearms",
     brawl: "wod.abilities.brawl",
-    martialarts: "wod.abilities.martialarts"
+    martialarts: "wod.abilities.martialarts",
+	survival: "wod.abilities.survival"
 } 
 
 wod.damageTypes = {
