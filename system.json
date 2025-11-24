@@ -100,7 +100,7 @@
   "url": "https://github.com/KalSunchaser77/Foundry_VtM2ed",
   "bugs": "https://github.com/JohanFalt/Foundry_WoD20/issues",
   "changelog": "https://github.com/JohanFalt/Foundry_WoD20/wiki/Changelog",
-  "background": "systems/vtm20-2e-saa/assets/img/graphics/wod.png",
+  "background": "systems/vtm20-2e-saa/assets/img/graphics/vtmankh.jpg",
   "manifest": "https://raw.githubusercontent.com/KalSunchaser77/Foundry_VtM2ed/refs/heads/main/system.json",  
   "download": "https://github.com/KalSunchaser77/Foundry_VtM2ed/archive/refs/heads/main.zip",
   "license": "LICENSE.txt"
