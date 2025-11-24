@@ -20,13 +20,13 @@
     "wod.js"
   ],
 "packs": [
-  {
+    {
     "name": "vtm2e-disciplines",
     "label": "VtM 2E – Disciplines",
     "path": "packs/vtm-2e-disciplines.db",
     "type": "Item"
-  }
-],
+    }
+  ],
   "styles": [
     "lib/koption/koptions.css",
     "lib/editor/editor.css",
