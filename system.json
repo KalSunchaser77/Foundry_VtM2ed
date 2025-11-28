@@ -14,13 +14,13 @@
     "label": "VtM 2e – Disciplines",
     "path": "packs/vtm-2e-disciplines",
     "type": "Item"
-  },
+  }
   {
     "name": "vtm2e-backgrounds",
     "label": "VtM 2e – Backgrounds",
     "path": "packs/vtm-2e-backgrounds",
     "type": "Item"
-  },
+  }
   {
     "name": "vtm2e-traits",
     "label": "VtM 2e – Traits",
