@@ -1,0 +1,8 @@
+2025/11/29-11:01:24.407 a904 Recovering log #19
+2025/11/29-11:01:24.422 a904 Delete type=0 #19
+2025/11/29-11:01:24.422 a904 Delete type=3 #17
+2025/11/29-11:02:41.911 a61c Level-0 table #24: started
+2025/11/29-11:02:41.911 a61c Level-0 table #24: 0 bytes OK
+2025/11/29-11:02:41.912 a61c Delete type=0 #22
+2025/11/29-11:02:41.924 a61c Manual compaction at level-0 from '!items!1bEh7LFvCxcjPGyX' @ 72057594037927935 : 1 .. '!items!qUxKm5FAOLLyKwOC' @ 0 : 0; will stop at (end)
+2025/11/29-11:02:41.924 a61c Manual compaction at level-1 from '!items!1bEh7LFvCxcjPGyX' @ 72057594037927935 : 1 .. '!items!qUxKm5FAOLLyKwOC' @ 0 : 0; will stop at (end)
