@@ -29,10 +29,6 @@ export default class settings extends foundry.abstract.DataModel {
                     bonus: new fields.NumberField({...bonusInteger}),
                     isrollable: new fields.BooleanField({initial: true})
                 }),
-                lethal: new fields.SchemaField({
-                    bonus: new fields.NumberField({...bonusInteger}),
-                    isrollable: new fields.BooleanField({initial: true})
-                }),
                 aggravated: new fields.SchemaField({
                     bonus: new fields.NumberField({...bonusInteger}),
                     isrollable: new fields.BooleanField({initial: true})
@@ -40,10 +36,6 @@ export default class settings extends foundry.abstract.DataModel {
                 chimerical: new fields.SchemaField({
                     
                     bashing: new fields.SchemaField({
-                        bonus: new fields.NumberField({...bonusInteger}),
-                        isrollable: new fields.BooleanField({initial: true})
-                    }),
-                    lethal: new fields.SchemaField({
                         bonus: new fields.NumberField({...bonusInteger}),
                         isrollable: new fields.BooleanField({initial: true})
                     }),
