@@ -1532,7 +1532,7 @@ export const registerHandlebarsHelpers = function () {
 	});
 
 	Handlebars.registerHelper("getInjuredLevel", function (type, health) {
-		let totalDamage = health.damage.bashing + health.damage.lethal + health.damage.aggravated;
+		let totalDamage = health.damage.bashing + health.damage.aggravated;
 		if (totalDamage == 0) return game.i18n.localize("wod.health.uninjured");
 
 		totalDamage = totalDamage - health.bruised.total;
