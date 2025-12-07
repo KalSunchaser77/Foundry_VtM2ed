@@ -256,7 +256,6 @@ wod.attackRangedAbilities = {
 
 wod.damageTypes = {
     bashing: "wod.health.bashing",
-    lethal: "wod.health.lethal",
     aggravated: "wod.health.aggravated"
 }
 
