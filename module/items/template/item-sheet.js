@@ -24,7 +24,7 @@ export class WoDItemSheet extends foundry.appv1.sheets.ItemSheet {
 		let sheet = this.item.type;
 		sheet = sheet.toLowerCase().replace(" ", "");
 
-		return `systems/worldofdarkness/templates/sheets/${sheet}-sheet.html`;
+		return `systems/vtm20-2e-saa/templates/sheets/${sheet}-sheet.html`;
 	}
 
 	/** @override */
