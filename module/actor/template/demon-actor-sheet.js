@@ -9,7 +9,7 @@ export default class DemonActorSheet extends MortalActorSheet {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["wod20 wod-sheet demon"],
-			template: "systems/worldofdarkness/templates/actor/demon-sheet.html"
+			template: "systems/vtm20-2e-saa/templates/actor/demon-sheet.html"
 		});
 	}
   
@@ -54,7 +54,7 @@ export default class DemonActorSheet extends MortalActorSheet {
 
 	/** @override */
 	get template() {
-		return "systems/worldofdarkness/templates/actor/demon-sheet.html";
+		return "systems/vtm20-2e-saa/templates/actor/demon-sheet.html";
 	}
 	
 	/** @override */
