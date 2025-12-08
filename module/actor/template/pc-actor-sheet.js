@@ -43,13 +43,13 @@ export default class PCActorSheet extends HandlebarsApplicationMixin(foundry.app
 
 	static PARTS = {	
 		tabs: {
-			template: "systems/worldofdarkness/templates/actor/parts/navigation.hbs"
+			template: "systems/vtm20-2e-saa/templates/actor/parts/navigation.hbs"
 		},
 		bio: {
-			template: "systems/worldofdarkness/templates/actor/parts/bio.hbs"
+			template: "systems/vtm20-2e-saa/templates/actor/parts/bio.hbs"
 		},
 		stats: {
-			template: "systems/worldofdarkness/templates/actor/parts/stats.hbs"
+			template: "systems/vtm20-2e-saa/templates/actor/parts/stats.hbs"
 		}
 	}
 
