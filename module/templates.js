@@ -14,170 +14,170 @@ export const preloadHandlebarsTemplates = async function () {
 	// Define template paths to load
 	const templatePaths = [
 		// Actor Sheet Partials
-		"systems/worldofdarkness/templates/actor/parts/description.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/description.hbs",
 
-		"systems/worldofdarkness/templates/actor/parts/bio.hbs",
-		"systems/worldofdarkness/templates/actor/parts/stats.hbs",
-		"systems/worldofdarkness/templates/actor/parts/attributes.hbs",
-		"systems/worldofdarkness/templates/actor/parts/abilities.hbs",
-		"systems/worldofdarkness/templates/actor/parts/stats_adventages.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/bio.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/stats.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/attributes.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/abilities.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/stats_adventages.hbs",
 
 		
 
-		"systems/worldofdarkness/templates/actor/parts/profile-img.html",
-		"systems/worldofdarkness/templates/actor/parts/navigation.html",
-		"systems/worldofdarkness/templates/actor/parts/navigation.hbs",
-		"systems/worldofdarkness/templates/actor/parts/bio.html",		
-		"systems/worldofdarkness/templates/actor/parts/attributes.html",		
-		"systems/worldofdarkness/templates/actor/parts/abilities.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/profile-img.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/navigation.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/navigation.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/bio.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/attributes.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/abilities.html",
 		
-		"systems/worldofdarkness/templates/actor/parts/combat.html",
-		"systems/worldofdarkness/templates/actor/parts/power.html",
-		"systems/worldofdarkness/templates/actor/parts/power.hbs",
-		"systems/worldofdarkness/templates/actor/parts/conditions.html",			// TODO - Seperate file?
-		"systems/worldofdarkness/templates/actor/parts/movement.html",				// TODO - Seperate file?
-		"systems/worldofdarkness/templates/actor/parts/macro_icons.html",
-		"systems/worldofdarkness/templates/actor/parts/combat_natural.html",
-		"systems/worldofdarkness/templates/actor/parts/combat_melee.html",
-		"systems/worldofdarkness/templates/actor/parts/combat_ranged.html",
-		"systems/worldofdarkness/templates/actor/parts/combat_armor.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/combat.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/power.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/power.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/conditions.html",			// TODO - Seperate file?
+		"systems/vtm20-2e-saa/templates/actor/parts/movement.html",				// TODO - Seperate file?
+		"systems/vtm20-2e-saa/templates/actor/parts/macro_icons.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/combat_natural.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/combat_melee.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/combat_ranged.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/combat_armor.html",		
 
-		"systems/worldofdarkness/templates/actor/parts/stats.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/stats.html",		
 		
-		"systems/worldofdarkness/templates/actor/parts/creature/stats.html",
-		"systems/worldofdarkness/templates/actor/parts/stats_virtue.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/creature/stats.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/stats_virtue.html",		
 
-		"systems/worldofdarkness/templates/actor/parts/hunter/stats_virtue.html",
-		"systems/worldofdarkness/templates/actor/parts/demon/forms.html",
-		"systems/worldofdarkness/templates/actor/parts/demon/forms.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/hunter/stats_virtue.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/demon/forms.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/demon/forms.hbs",
 		
-		"systems/worldofdarkness/templates/actor/parts/stats_health.html",
-		"systems/worldofdarkness/templates/actor/parts/stats_health_old.html",		// TODO - should be removed or reworked in future
-		"systems/worldofdarkness/templates/actor/parts/gear.html",
-		"systems/worldofdarkness/templates/actor/parts/notes.html",
-		"systems/worldofdarkness/templates/actor/parts/effect.html",
-		"systems/worldofdarkness/templates/actor/parts/settings.html",
-		"systems/worldofdarkness/templates/actor/parts/settings_attribute.html",
-		"systems/worldofdarkness/templates/actor/parts/settings_abilities.html",
-		"systems/worldofdarkness/templates/actor/parts/settings_combat.html",
-		"systems/worldofdarkness/templates/actor/parts/settings_power.html",
-		"systems/worldofdarkness/templates/actor/parts/settings_sheet.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/stats_health.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/stats_health_old.html",		// TODO - should be removed or reworked in future
+		"systems/vtm20-2e-saa/templates/actor/parts/gear.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/notes.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/effect.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/settings.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/settings_attribute.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/settings_abilities.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/settings_combat.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/settings_power.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/settings_sheet.html",
 
 		// Vampire
-		"systems/worldofdarkness/templates/actor/parts/vampire/bio_vampire_background.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/vampire/bio_vampire_background.html",		
 
-		"systems/worldofdarkness/templates/actor/parts/vampire/disciplines.html",
-		"systems/worldofdarkness/templates/actor/parts/vampire/disciplines.hbs",
-		"systems/worldofdarkness/templates/actor/parts/mainpower_list.hbs",
-		"systems/worldofdarkness/templates/actor/parts/power_list.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/vampire/disciplines.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/vampire/disciplines.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/mainpower_list.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/power_list.hbs",
 
 		// Mage
-		"systems/worldofdarkness/templates/actor/parts/mage/bio_mage_background.html",		
-		"systems/worldofdarkness/templates/actor/parts/mage/stats_arete.html",			// TODO - should use the new stat function
-		"systems/worldofdarkness/templates/actor/parts/mage/stats_quintessence.html",	
+		"systems/vtm20-2e-saa/templates/actor/parts/mage/bio_mage_background.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/mage/stats_arete.html",			// TODO - should use the new stat function
+		"systems/vtm20-2e-saa/templates/actor/parts/mage/stats_quintessence.html",	
 
-		"systems/worldofdarkness/templates/actor/parts/mage/magic.html",
-		"systems/worldofdarkness/templates/actor/parts/mage/resonance.html",
-		"systems/worldofdarkness/templates/actor/parts/mage/spheres.html",
-		"systems/worldofdarkness/templates/actor/parts/mage/rotes.hbs",
-		"systems/worldofdarkness/templates/actor/parts/mage/focus.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/mage/magic.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/mage/resonance.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/mage/spheres.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/mage/rotes.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/mage/focus.html",
 
 		// Werewolf
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_werewolf_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_ajaba_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_ananasi_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_bastet_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_corax_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_gurahl_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_kitsune_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_mokole_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_nagah_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_nuwisha_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_ratkin_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_rokea_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_werewolf_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_ajaba_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_ananasi_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_bastet_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_corax_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_gurahl_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_kitsune_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_mokole_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_nagah_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_nuwisha_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_ratkin_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_rokea_background.html",
 
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_apis_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_camazotz_background.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/bio_grondr_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_apis_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_camazotz_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/bio_grondr_background.html",
 
-		"systems/worldofdarkness/templates/actor/parts/werewolf/stats_nagah_renown.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/stats_nagah_renown.html",
 
-		"systems/worldofdarkness/templates/actor/parts/werewolf/combat_active.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/combat_active.html",
 
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_ajaba.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_ananasi.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_bastet.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_corax.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_gurahl.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_kitsune.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_mokole.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_nagah.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_nuwisha.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_ratkin.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_rokea.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_ajaba.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_ananasi.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_bastet.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_corax.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_gurahl.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_kitsune.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_mokole.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_nagah.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_nuwisha.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_ratkin.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_rokea.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift.html",		
 
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_apis.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_camazotz.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/shift_grondr.html",	
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_apis.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_camazotz.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_grondr.html",	
 
-		"systems/worldofdarkness/templates/actor/parts/gifts.html",
-		"systems/worldofdarkness/templates/actor/parts/gifts.hbs",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/gift.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/gift.hbs",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/rites.html",
-		"systems/worldofdarkness/templates/actor/parts/werewolf/rites.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/gifts.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/gifts.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/gift.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/gift.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/rites.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/werewolf/rites.hbs",
 
 		// Changeling
-		"systems/worldofdarkness/templates/actor/parts/changeling/bio_changeling_background.html",				
+		"systems/vtm20-2e-saa/templates/actor/parts/changeling/bio_changeling_background.html",				
 
-		"systems/worldofdarkness/templates/actor/parts/changeling/dreaming.html",
-		"systems/worldofdarkness/templates/actor/parts/changeling/dreaming.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/changeling/dreaming.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/changeling/dreaming.hbs",
 
 		// Hunter
-		"systems/worldofdarkness/templates/actor/parts/hunter/bio_hunter_background.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/hunter/bio_hunter_background.html",		
 		
-		"systems/worldofdarkness/templates/actor/parts/hunter/edges.html",
-		"systems/worldofdarkness/templates/actor/parts/hunter/edges.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/hunter/edges.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/hunter/edges.hbs",
 
 		// Demon
-		"systems/worldofdarkness/templates/actor/parts/demon/bio_demon_background.html",	
+		"systems/vtm20-2e-saa/templates/actor/parts/demon/bio_demon_background.html",	
 		
-		"systems/worldofdarkness/templates/actor/parts/demon/lores.html",
-		"systems/worldofdarkness/templates/actor/parts/demon/lores.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/demon/lores.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/demon/lores.hbs",
 
 		// Wraith
-		"systems/worldofdarkness/templates/actor/parts/wraith/bio_wraith_background.html",
-		"systems/worldofdarkness/templates/actor/parts/wraith/shadow.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/wraith/bio_wraith_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/wraith/shadow.html",
 
 		// Mummy
-		"systems/worldofdarkness/templates/actor/parts/mummy/bio_mummy_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/mummy/bio_mummy_background.html",
 
 		// Wraith
-		"systems/worldofdarkness/templates/actor/parts/wraith/death.html",
-		"systems/worldofdarkness/templates/actor/parts/wraith/death.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/wraith/death.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/wraith/death.hbs",
 
 		// Exalted
-		"systems/worldofdarkness/templates/actor/parts/exalted/bio_exalted_background.html",
-		"systems/worldofdarkness/templates/actor/parts/exalted/exalted_charms.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/exalted/bio_exalted_background.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/exalted/exalted_charms.hbs",
 
 		// Orpheus
-		"systems/worldofdarkness/templates/actor/parts/variant/bio_orpheus_background.html",	
+		"systems/vtm20-2e-saa/templates/actor/parts/variant/bio_orpheus_background.html",	
 
 		// Sorcerer
-		"systems/worldofdarkness/templates/actor/parts/variant/bio_sorcerer_background.html",		
-		"systems/worldofdarkness/templates/actor/parts/variant/stats_quintessence.html",	
+		"systems/vtm20-2e-saa/templates/actor/parts/variant/bio_sorcerer_background.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/variant/stats_quintessence.html",	
 		
 		// Creature
-		"systems/worldofdarkness/templates/actor/parts/creature/charms.html",		
-		"systems/worldofdarkness/templates/actor/parts/creature/charms.hbs",
-		"systems/worldofdarkness/templates/actor/parts/creature/power.html",
-		"systems/worldofdarkness/templates/actor/parts/creature/power.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/creature/charms.html",		
+		"systems/vtm20-2e-saa/templates/actor/parts/creature/charms.hbs",
+		"systems/vtm20-2e-saa/templates/actor/parts/creature/power.html",
+		"systems/vtm20-2e-saa/templates/actor/parts/creature/power.hbs",
 
 		// Item Sheet Partials
-		"systems/worldofdarkness/templates/sheets/parts/power_rollable.html",
-		"systems/worldofdarkness/templates/sheets/parts/power_description.html",
-		"systems/worldofdarkness/templates/sheets/parts/item_bonus.html"		
+		"systems/vtm20-2e-saa/templates/sheets/parts/power_rollable.html",
+		"systems/vtm20-2e-saa/templates/sheets/parts/power_description.html",
+		"systems/vtm20-2e-saa/templates/sheets/parts/item_bonus.html"		
 	];
 
 	/* Load the template parts */
@@ -188,7 +188,7 @@ export function SetupAbilities()
 {
     try {        
 		let importData = dataability;
-		// let fileData = await fetch(`systems/worldofdarkness/assets/data/ability.json`).then((response) => response.json());
+		// let fileData = await fetch(`systems/vtm20-2e-saa/assets/data/ability.json`).then((response) => response.json());
 		// Object.assign(importData, fileData);
 
 		return importData;		
@@ -203,7 +203,7 @@ export function SetupBio()
 {
     try {        
 		let importData = databio;
-		/* let fileData = await fetch(`systems/worldofdarkness/assets/data/bio.json`).then((response) => response.json());
+		/* let fileData = await fetch(`systems/vtm20-2e-saa/assets/data/bio.json`).then((response) => response.json());
 		Object.assign(importData, fileData);
  */
 		return importData;		
