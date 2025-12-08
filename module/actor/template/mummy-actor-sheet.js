@@ -8,7 +8,7 @@ export default class MummyActorSheet extends MortalActorSheet {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["wod20 wod-sheet mummy"],
-			template: "systems/worldofdarkness/templates/actor/mummy-sheet.html"
+			template: "systems/vtm20-2e-saa/templates/actor/mummy-sheet.html"
 		});
 	}
   
@@ -30,7 +30,7 @@ export default class MummyActorSheet extends MortalActorSheet {
 
 	/** @override */
 	get template() {
-		return "systems/worldofdarkness/templates/actor/mummy-sheet.html";
+		return "systems/vtm20-2e-saa/templates/actor/mummy-sheet.html";
 	}
 	
 	/** @override */
