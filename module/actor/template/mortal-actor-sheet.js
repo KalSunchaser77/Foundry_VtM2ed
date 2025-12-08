@@ -19,7 +19,7 @@ export default class MortalActorSheet extends foundry.appv1.sheets.ActorSheet {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["wod20 wod-sheet mortal"],
-			template: "systems/worldofdarkness/templates/actor/mortal-sheet.html",
+			template: "systems/vtm20-2e-saa/templates/actor/mortal-sheet.html",
 			tabs: [{
 				navSelector: ".sheet-tabs",
 				contentSelector: ".sheet-body",
@@ -45,7 +45,7 @@ export default class MortalActorSheet extends foundry.appv1.sheets.ActorSheet {
 	
 	/** @override */
 	get template() {
-		return "systems/worldofdarkness/templates/actor/mortal-sheet.html";
+		return "systems/vtm20-2e-saa/templates/actor/mortal-sheet.html";
 	}
 
 	/** @override */
@@ -998,7 +998,7 @@ export default class MortalActorSheet extends foundry.appv1.sheets.ActorSheet {
 			system = sheettype;
 
 			// Render the template
-			const itemselectionTemplate = 'systems/worldofdarkness/templates/dialogs/dialog-new-item.hbs';
+			const itemselectionTemplate = 'systems/vtm20-2e-saa/templates/dialogs/dialog-new-item.hbs';
 			const itemselectionData = {
 				tab: origin,
 				sheettype: sheettype,
@@ -1271,7 +1271,7 @@ export default class MortalActorSheet extends foundry.appv1.sheets.ActorSheet {
 		};
 	
 		// Render the chat card template
-		const template = `systems/worldofdarkness/templates/dialogs/roll-template.hbs`;
+		const template = `systems/vtm20-2e-saa/templates/dialogs/roll-template.hbs`;
 		const html = await foundry.applications.handlebars.renderTemplate(template, templateData);
 	
 		const chatData = {
