@@ -37,7 +37,7 @@ export class DialogSoakRoll extends FormApplication {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["wod20 wod-dialog soak-dialog"],
-            template: "systems/worldofdarkness/templates/dialogs/dialog-soak.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-soak.hbs",
             closeOnSubmit: false,
             submitOnChange: true,
             resizable: true
