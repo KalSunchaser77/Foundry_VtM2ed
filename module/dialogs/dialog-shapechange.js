@@ -30,7 +30,7 @@ export class DialogShapeChange extends FormApplication {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["wod20 wod-dialog shapechange-dialog"],
-            template: "systems/worldofdarkness/templates/dialogs/dialog-shapechange.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-shapechange.hbs",
             closeOnSubmit: false,
             submitOnChange: true,
             resizable: true
