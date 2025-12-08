@@ -647,7 +647,7 @@ export class Rules extends FormApplication {
             id: "rules",
             classes: ["wod20rule-dialog"],
             title: game.i18n.localize('wod.settings.rulesettings'),
-            template: "systems/worldofdarkness/templates/dialogs/dialog-settings-rule.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-settings-rule.hbs",
         });
     }
   
@@ -729,7 +729,7 @@ export class Dices extends FormApplication {
             id: "dices",
             classes: ["wod20rule-dialog"],
             title: game.i18n.localize("wod.settings.rollsettings"),
-            template: "systems/worldofdarkness/templates/dialogs/dialog-settings-dice.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-settings-dice.hbs",
         });
     }
   
@@ -820,7 +820,7 @@ export class Era extends FormApplication {
             id: "dices",
             classes: ["wod20rule-dialog"],
             title: game.i18n.localize("wod.settings.erasettings"),
-            template: "systems/worldofdarkness/templates/dialogs/dialog-settings-era.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-settings-era.hbs",
         });
     }
   
@@ -902,7 +902,7 @@ export class Demon extends FormApplication {
             id: "demon",
             classes: ["wod20rule-dialog"],
             title: game.i18n.localize("wod.settings.demonsettings"),
-            template: "systems/worldofdarkness/templates/dialogs/dialog-settings-rule.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-settings-rule.hbs",
         });
     }
   
@@ -985,7 +985,7 @@ export class Hunter extends FormApplication {
             id: "hunter",
             classes: ["wod20rule-dialog"],
             title: game.i18n.localize("wod.settings.huntersettings"),
-            template: "systems/worldofdarkness/templates/dialogs/dialog-settings-rule.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-settings-rule.hbs",
         });
     }
   
@@ -1067,7 +1067,7 @@ export class Werewolf extends FormApplication {
             id: "werewolf",
             classes: ["wod20rule-dialog"],
             title: game.i18n.localize("wod.settings.werewolfsettings"),
-            template: "systems/worldofdarkness/templates/dialogs/dialog-settings-rule.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-settings-rule.hbs",
         });
     }
   
@@ -1149,7 +1149,7 @@ export class Permissions extends FormApplication {
             id: "permission",
             classes: ["wod20rule-dialog"],
             title: game.i18n.localize('wod.settings.permissionsettings'),
-            template: "systems/worldofdarkness/templates/dialogs/dialog-settings-rule.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-settings-rule.hbs",
         });
     }
   
@@ -1231,7 +1231,7 @@ export class Graphics extends FormApplication {
             id: "graphics",
             classes: ["wod20rule-dialog"],
             title: game.i18n.localize('wod.settings.graphicsettings'),
-            template: "systems/worldofdarkness/templates/dialogs/dialog-settings-rule.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-settings-rule.hbs",
         });
     }
   
