@@ -71,7 +71,7 @@ export class TourHelper extends foundry.nue.Tour {
 				document.querySelector(target)?.click();
 
 				if(!game.actors.get('ExampleDemon0001') ) {
-					const data = await foundry.utils.fetchJsonWithTimeout('systems/worldofdarkness/tours/data/demon.json', {}, { int:30000});					
+					const data = await foundry.utils.fetchJsonWithTimeout('systems/vtm20-2e-saa/tours/data/demon.json', {}, { int:30000});					
 					await Actor.create([data], { keepId: true});
 				}
 				break;
@@ -79,7 +79,7 @@ export class TourHelper extends foundry.nue.Tour {
 				document.querySelector(target)?.click();
 
 				if(!game.actors.get('ExampleWerewolf1') ) {
-					const data = await foundry.utils.fetchJsonWithTimeout('systems/worldofdarkness/tours/data/werewolf.json', {}, { int:30000});					
+					const data = await foundry.utils.fetchJsonWithTimeout('systems/vtm20-2e-saa/tours/data/werewolf.json', {}, { int:30000});					
 					await Actor.create([data], { keepId: true});
 				}
 				break;
@@ -87,7 +87,7 @@ export class TourHelper extends foundry.nue.Tour {
 				document.querySelector(target)?.click();
 
 				if(!game.actors.get('ExampleVampire01') ) {
-					const data = await foundry.utils.fetchJsonWithTimeout('systems/worldofdarkness/tours/data/vampire.json', {}, { int:30000});					
+					const data = await foundry.utils.fetchJsonWithTimeout('systems/vtm20-2e-saa/tours/data/vampire.json', {}, { int:30000});					
 					await Actor.create([data], { keepId: true});
 				}
 				break;
