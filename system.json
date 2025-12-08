@@ -21,6 +21,12 @@
     "type": "Item"
   },
   {
+    "name": "vtm-2e-weapons-and-items",
+    "label": "VtM 2e – Weapons & Armor",
+    "path": "packs/vtm-2e-weapons-and-items",
+    "type": "Item"
+  },
+  {
     "name": "vtm-2e-getting-started",
     "label": "VtM 2e – Getting Started",
     "path": "packs/vtm-2e-getting-started",
