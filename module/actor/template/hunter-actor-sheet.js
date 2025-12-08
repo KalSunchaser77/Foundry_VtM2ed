@@ -8,7 +8,7 @@ export default class HunterActorSheet extends MortalActorSheet {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["wod20 wod-sheet hunter"],
-			template: "systems/worldofdarkness/templates/actor/hunter-sheet.html"
+			template: "systems/vtm20-2e-saa/templates/actor/hunter-sheet.html"
 		});
 	}
   
@@ -30,7 +30,7 @@ export default class HunterActorSheet extends MortalActorSheet {
 
 	/** @override */
 	get template() {
-		return "systems/worldofdarkness/templates/actor/hunter-sheet.html";
+		return "systems/vtm20-2e-saa/templates/actor/hunter-sheet.html";
 	}
 	
 	/** @override */
