@@ -32,7 +32,7 @@ export class DialogVariant extends FormApplication {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
             classes: ["wod20 wod-dialog dialog-top"],
-            template: "systems/worldofdarkness/templates/dialogs/dialog-variant.hbs",
+            template: "systems/vtm20-2e-saa/templates/dialogs/dialog-variant.hbs",
             closeOnSubmit: false,
             submitOnChange: true,
             resizable: true
