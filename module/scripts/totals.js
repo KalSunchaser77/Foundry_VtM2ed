@@ -109,14 +109,10 @@ export async function calculateTotals(updateData) {
 	}
 
 	updateData.system.soak.bashing = 0;
-	updateData.system.soak.lethal = 0;
 	updateData.system.soak.aggravated = 0;
 
 	if (updateData.system.settings.soak.bashing.isrollable) {
 		updateData.system.soak.bashing = updateData.system.attributes.stamina.total;
-	}
-	if (updateData.system.settings.soak.lethal.isrollable) {
-		updateData.system.soak.lethal = updateData.system.attributes.stamina.total;
 	}
 	if (updateData.system.settings.soak.aggravated.isrollable) {
 		updateData.system.soak.aggravated = updateData.system.attributes.stamina.total;
@@ -125,14 +121,10 @@ export async function calculateTotals(updateData) {
 	/* If Changeling and Chimerical soak */
 	if (updateData.system.settings.soak.chimerical != undefined) {
 		updateData.system.soak.chimerical.bashing = 0;
-		updateData.system.soak.chimerical.lethal = 0;
 		updateData.system.soak.chimerical.aggravated = 0;
 
 		if (updateData.system.settings.soak.chimerical.bashing.isrollable) {
 			updateData.system.soak.chimerical.bashing = updateData.system.attributes.stamina.total;
-		}
-		if (updateData.system.settings.soak.chimerical.lethal.isrollable) {
-			updateData.system.soak.chimerical.lethal = updateData.system.attributes.stamina.total;
 		}
 		if (updateData.system.settings.soak.chimerical.aggravated.isrollable) {
 			updateData.system.soak.chimerical.aggravated = updateData.system.attributes.stamina.total;
@@ -143,12 +135,10 @@ export async function calculateTotals(updateData) {
 	if (await BonusHelper.CheckSoakBuff(updateData)) {
 		const bonus = await BonusHelper.GetSoakBuff(updateData);
 		updateData.system.soak.bashing += parseInt(bonus);
-		updateData.system.soak.lethal += parseInt(bonus);
 		updateData.system.soak.aggravated += parseInt(bonus);
 
 		if (updateData.system.settings.soak.chimerical != undefined) {
 			updateData.system.soak.chimerical.bashing += parseInt(bonus);
-			updateData.system.soak.chimerical.lethal += parseInt(bonus);
 			updateData.system.soak.chimerical.aggravated += parseInt(bonus);
 		}
 	}
@@ -158,14 +148,12 @@ export async function calculateTotals(updateData) {
 		if ((i.type == "Armor") && (i.system?.isequipped)) {
 			if (updateData.system.shapes == undefined) {
 				updateData.system.soak.bashing += i.system.soak.bashing;
-				updateData.system.soak.lethal += i.system.soak.lethal;
 				updateData.system.soak.aggravated += i.system.soak.aggravated;
 				updateData.system.attributes.dexterity.total += i.system.dexpenalty;
 
 				/* If changeling */
 				if (updateData.system.settings.soak.chimerical != undefined) {
 					updateData.system.soak.chimerical.bashing += i.system.soak.chimerical.bashing;
-					updateData.system.soak.chimerical.lethal += i.system.soak.chimerical.lethal;
 					updateData.system.soak.chimerical.aggravated += i.system.soak.chimerical.aggravated;
 				}
 			}
@@ -193,7 +181,6 @@ export async function calculateTotals(updateData) {
 
 						if (hasform) {
 							updateData.system.soak.bashing += i.system.soak.bashing;
-							updateData.system.soak.lethal += i.system.soak.lethal;
 							updateData.system.soak.aggravated += i.system.soak.aggravated;
 							updateData.system.attributes.dexterity.total += i.system.dexpenalty;
 
@@ -234,7 +221,6 @@ export async function calculateTotals(updateData) {
 		updateData.system.initiative.total = parseInt(updateData.system.initiative.base) + parseInt(updateData.system.initiative.bonus);
 
 		updateData.system.soak.bashing = parseInt(updateData.system.advantages.willpower.permanent);
-		updateData.system.soak.lethal = parseInt(updateData.system.advantages.willpower.permanent);
 		updateData.system.soak.aggravated = parseInt(updateData.system.advantages.willpower.permanent);
 	}	
 
