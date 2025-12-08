@@ -15,34 +15,34 @@
 			<div class="navigation pullLeft">
 				{{#if (not actor.limited)}}
 					<!-- Lock/Unlock -->
-					{{> "systems/worldofdarkness/templates/actor/parts/profile-img.html"}}	
+					{{> "systems/vtm20-2e-saa/templates/actor/parts/profile-img.html"}}	
 				{{/if}}
 
 				<!-- Navigation -->
-				{{> "systems/worldofdarkness/templates/actor/parts/navigation.html"}}
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/navigation.html"}}
 			</div>
 
 			<div class="pullRight">
 				<div data-area="shapeicon">
 					{{#if (shifterHasForm actor 'homid')}}
-						<img class="shapeIcon" src="systems/worldofdarkness/assets/img/werewolf/form/form_homid.svg" />
+						<img class="shapeIcon" src="systems/vtm20-2e-saa/assets/img/werewolf/form/form_homid.svg" />
 					{{/if}}
 					{{#if (shifterHasForm actor 'glabro')}}
-						<img class="shapeIcon" src="systems/worldofdarkness/assets/img/werewolf/form/form_glabro.svg" />
+						<img class="shapeIcon" src="systems/vtm20-2e-saa/assets/img/werewolf/form/form_glabro.svg" />
 					{{/if}}
 					{{#if (shifterHasForm actor 'crinos')}}
-						<img class="shapeIcon" src="systems/worldofdarkness/assets/img/werewolf/form/form_crinos.svg" />
+						<img class="shapeIcon" src="systems/vtm20-2e-saa/assets/img/werewolf/form/form_crinos.svg" />
 					{{/if}}
 					{{#if (shifterHasForm actor 'hispo')}}
-						<img class="shapeIcon" src="systems/worldofdarkness/assets/img/werewolf/form/form_hispo.svg" />
+						<img class="shapeIcon" src="systems/vtm20-2e-saa/assets/img/werewolf/form/form_hispo.svg" />
 					{{/if}}
 					{{#if (shifterHasForm actor 'lupus')}}
-						<img class="shapeIcon" src="systems/worldofdarkness/assets/img/werewolf/form/form_lupus.svg" />
+						<img class="shapeIcon" src="systems/vtm20-2e-saa/assets/img/werewolf/form/form_lupus.svg" />
 					{{/if}}
 				</div>
 
 				<!-- Macro icons -->
-				{{> "systems/worldofdarkness/templates/actor/parts/macro_icons.html"}}					
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/macro_icons.html"}}					
 			</div>
 
 			<div class="centerText sheet-headline splatFont">
@@ -52,7 +52,7 @@
 			<!-- Bio Tab -->
 			<div class="tab bio sheet-inner-area" data-group="primary" data-tab="bio">
 
-				{{~> "systems/worldofdarkness/templates/actor/parts/bio.html"}} 	
+				{{~> "systems/vtm20-2e-saa/templates/actor/parts/bio.html"}} 	
 
 			</div>
 		
@@ -64,14 +64,14 @@
 				<!-- Core Attributes -->
 				<div class="sheet-area flex-columns">
 
-					{{> "systems/worldofdarkness/templates/actor/parts/attributes.html"}} 	
+					{{> "systems/vtm20-2e-saa/templates/actor/parts/attributes.html"}} 	
 
 				</div>
 
 				<!-- Core Abilities -->
 				<div class="sheet-area flex-columns">
 
-					{{> "systems/worldofdarkness/templates/actor/parts/abilities.html"}}
+					{{> "systems/vtm20-2e-saa/templates/actor/parts/abilities.html"}}
 
 				</div>
 
@@ -124,7 +124,7 @@
 									
 									</div>
 
-									{{> "systems/worldofdarkness/templates/actor/parts/werewolf/stats_nagah_renown.html"}}
+									{{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/stats_nagah_renown.html"}}
 								{{/if}}                            
 							</div>
 							
@@ -153,7 +153,7 @@
 
 								{{#if data.system.settings.hasvirtue}}
 									<div style="margin-top: auto;">
-										{{> "systems/worldofdarkness/templates/actor/parts/stats_virtue.html"}}
+										{{> "systems/vtm20-2e-saa/templates/actor/parts/stats_virtue.html"}}
 									</div>
 								{{/if}}
 								
@@ -170,7 +170,7 @@
 							<div class="pullLeft" style="width: 33%; height: 100%; display: flex; flex-direction: column;">
 
 								<div style="width: 100%;">
-									{{> "systems/worldofdarkness/templates/actor/parts/stats_health.html"}}
+									{{> "systems/vtm20-2e-saa/templates/actor/parts/stats_health.html"}}
 								</div>
 
 								<div class="sheet-headline headlineGroup splatFont" style="margin-top: auto;">
@@ -188,14 +188,14 @@
 			<!-- Combat Tab -->
 			<div class="tab combat sheet-inner-area" data-group="primary" data-tab="combat">
 
-				{{> "systems/worldofdarkness/templates/actor/parts/combat.html"}}
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/combat.html"}}
 
 			</div>
 
 			<!-- Gear Tab -->
 			<div class="tab gear sheet-inner-area" data-group="primary" data-tab="gear">
 
-				{{~> "systems/worldofdarkness/templates/actor/parts/gear.html"}}
+				{{~> "systems/vtm20-2e-saa/templates/actor/parts/gear.html"}}
 
 			</div>
 
@@ -207,49 +207,49 @@
 				{{/if}}
 
 				{{#if (eq data.system.changingbreed "Ajaba")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_ajaba.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_ajaba.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Ananasi")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_ananasi.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_ananasi.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Bastet")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_bastet.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_bastet.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Corax")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_corax.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_corax.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Gurahl")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_gurahl.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_gurahl.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Kitsune")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_kitsune.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_kitsune.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Mokole")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_mokole.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_mokole.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Nagah")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_nagah.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_nagah.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Nuwisha")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_nuwisha.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_nuwisha.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Ratkin")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_ratkin.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_ratkin.html"}}
                 {{/if}}
                 {{#if (eq data.system.changingbreed "Rokea")}}
-                    {{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_rokea.html"}}
+                    {{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_rokea.html"}}
                 {{/if}}
 
 				{{#if (eq data.system.changingbreed "Apis")}}
-					{{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_apis.html"}}
+					{{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_apis.html"}}
 				{{/if}}
 			
 				{{#if (eq data.system.changingbreed "Camazotz")}}
-					{{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_camazotz.html"}}
+					{{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_camazotz.html"}}
 				{{/if}}
 			
 				{{#if (eq data.system.changingbreed "Grondr")}}
-					{{> "systems/worldofdarkness/templates/actor/parts/werewolf/shift_grondr.html"}}
+					{{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/shift_grondr.html"}}
 				{{/if}}
 
 			</div>
@@ -259,32 +259,32 @@
 
 				<i class="macroBtn pointer createicon fa-solid fa-square-plus item-create" title="{{localize "wod.labels.add.item"}}" aria-hidden="true" data-itemtype="All" data-origin="power"></i>
 
-				{{> "systems/worldofdarkness/templates/actor/parts/werewolf/gift.hbs"}}
-				{{> "systems/worldofdarkness/templates/actor/parts/werewolf/rites.hbs"}}
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/gift.hbs"}}
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/werewolf/rites.hbs"}}
 
 			</div>
 
 			{{!-- Power Tab --}}
-			{{> "systems/worldofdarkness/templates/actor/parts/power.hbs"}}
+			{{> "systems/vtm20-2e-saa/templates/actor/parts/power.hbs"}}
 			
 			<!-- Notes Tab -->
 			<div class="tab note sheet-inner-area" data-group="primary" data-tab="note">
 
-				{{> "systems/worldofdarkness/templates/actor/parts/notes.html"}}
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/notes.html"}}
 
 			</div>
 
 			<!-- Effect Tab -->
 			<div class="tab effect sheet-inner-area" data-group="primary" data-tab="effect">
 
-				{{> "systems/worldofdarkness/templates/actor/parts/effect.html"}} 	
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/effect.html"}} 	
 
 			</div>
 			
 			<!-- Settings Tab -->
 			<div class="tab settings sheet-inner-area" data-group="primary" data-tab="settings">
 			
-				{{> "systems/worldofdarkness/templates/actor/parts/settings.html"}}
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/settings.html"}}
 				
 			</div>
 		
