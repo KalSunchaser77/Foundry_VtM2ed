@@ -380,7 +380,6 @@ export default class CreateHelper {
 		actor.system.advantages.willpower.roll = willpower;
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = false;
 		actor.system.settings.soak.aggravated.isrollable = false;
 
 		actor.system.settings.haswillpower = true;
@@ -392,7 +391,6 @@ export default class CreateHelper {
 		console.log('WoD | Set Vampire Attributes');
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = true;
 		actor.system.settings.soak.aggravated.isrollable = false;
 
 		actor.system.settings.haspath = true;
@@ -408,7 +406,6 @@ export default class CreateHelper {
 		console.log('WoD | Set Werewolf Attributes');
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = true;
 		actor.system.settings.soak.aggravated.isrollable = true;
 
 		actor.system.settings.hasrage = true;
@@ -445,7 +442,6 @@ export default class CreateHelper {
 		actor.system.advantages.arete.roll = 1;
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = false;
 		actor.system.settings.soak.aggravated.isrollable = false;
 
 		actor.system.abilities.technology.type = "skill";
@@ -458,7 +454,6 @@ export default class CreateHelper {
 		console.log('WoD | Set Changeling Attributes');
 
 		actor.system.settings.soak.chimerical.bashing.isrollable = true;
-		actor.system.settings.soak.chimerical.lethal.isrollable = true;
 		actor.system.settings.soak.chimerical.aggravated.isrollable = false;
 		
 		actor.system.settings.hasglamour = true;
@@ -484,7 +479,6 @@ export default class CreateHelper {
 		console.log('WoD | Set Demon Attributes');
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = true;
 		actor.system.settings.soak.aggravated.isrollable = false;
 
 		actor.system.settings.hasvirtue = true;
@@ -513,7 +507,6 @@ export default class CreateHelper {
 		console.log('WoD | Set Orpheus Attributes');
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = true;
 		actor.system.settings.soak.aggravated.isrollable = false;
 
 		return actor;
@@ -523,7 +516,6 @@ export default class CreateHelper {
 		console.log('WoD | Set Sorcerer Attributes');
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = false;
 		actor.system.settings.soak.aggravated.isrollable = false;
 
 		return actor;
@@ -537,7 +529,6 @@ export default class CreateHelper {
 		actor.system.settings.powers.hashekau = true;
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = true;
 		actor.system.settings.soak.aggravated.isrollable = false;
 
 		return actor;
@@ -547,7 +538,6 @@ export default class CreateHelper {
 		console.log('WoD | Set Exalted Attributes');
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = true;
 		actor.system.settings.soak.aggravated.isrollable = true;
 
 		
@@ -559,7 +549,6 @@ export default class CreateHelper {
 		console.log('WoD | Set Creature Attributes');
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = false;
 		actor.system.settings.soak.aggravated.isrollable = false;
 
 		actor.system.settings.powers.haspowers = true;
@@ -571,7 +560,6 @@ export default class CreateHelper {
 		console.log('WoD | Set Spirit Attributes');
 
 		actor.system.settings.soak.bashing.isrollable = true;
-		actor.system.settings.soak.lethal.isrollable = true;
 		actor.system.settings.soak.aggravated.isrollable = true;
 	}
 
@@ -749,11 +737,9 @@ export default class CreateHelper {
 				actorData.system.settings.hasgnosis = true;
 				actorData.system.settings.hasessence = true;
 				actorData.system.settings.powers.hascharms = true;
-				actorData.system.settings.soak.lethal.isrollable = true;
 				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.mage;
 			}
 			if (variant == 'construct') {
-				actorData.system.settings.soak.lethal.isrollable = true;
 				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.mage;
 			}
 			if (variant == 'spirit') {
@@ -762,19 +748,16 @@ export default class CreateHelper {
 				actorData.system.settings.hasessence = true;
 				actorData.system.settings.powers.hasgifts = true;
 				actorData.system.settings.powers.hascharms = true;
-				actorData.system.settings.soak.lethal.isrollable = true;
 				actorData.system.settings.soak.aggravated.isrollable = true;
 			}
 			if (variant == 'warwolves') {
 				actorData.system.settings.hasrage = true;
-				actorData.system.settings.soak.lethal.isrollable = true;
 				actorData.system.settings.soak.aggravated.isrollable = true;
 				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.werewolf;
 			}
 			if (variant == 'anurana') {
 				actorData.system.settings.hasrage = true;
 				actorData.system.settings.hasgnosis = true;	
-				actorData.system.settings.soak.lethal.isrollable = true;
 				actorData.system.settings.soak.aggravated.isrollable = true;
 				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.werewolf;
 			}
@@ -782,14 +765,12 @@ export default class CreateHelper {
 				actorData.system.settings.hasrage = true;
 				actorData.system.settings.hasgnosis = true;	
 				actorData.system.settings.powers.hasgifts = true;
-				actorData.system.settings.soak.lethal.isrollable = true;
 				actorData.system.settings.soak.aggravated.isrollable = true;
 				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.werewolf;
 			}
 			if (variant == 'kerasi') {
 				actorData.system.settings.hasrage = true;
 				actorData.system.settings.hasgnosis = true;	
-				actorData.system.settings.soak.lethal.isrollable = true;
 				actorData.system.settings.soak.aggravated.isrollable = true;
 				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.werewolf;
 			}
@@ -797,7 +778,6 @@ export default class CreateHelper {
 				actorData.system.settings.hasrage = true;
 				actorData.system.settings.hasgnosis = true;	
 				actorData.system.settings.powers.hasgifts = true;
-				actorData.system.settings.soak.lethal.isrollable = true;
 				actorData.system.settings.soak.aggravated.isrollable = true;
 				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.werewolf;
 			}
