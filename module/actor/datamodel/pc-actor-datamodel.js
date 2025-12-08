@@ -68,7 +68,6 @@ export default class PCDataModel extends foundry.abstract.DataModel {
         // Same as before
         schema.soak = new fields.SchemaField({
             bashing:  new fields.NumberField({...valueInteger}),
-            lethal:  new fields.NumberField({...valueInteger}),
             aggravated:  new fields.NumberField({...valueInteger})
         });
 
