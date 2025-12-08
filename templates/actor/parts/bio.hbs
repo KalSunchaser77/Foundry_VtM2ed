@@ -94,14 +94,14 @@
 				</div>
 			{{/if}}
 
-			{{> "systems/worldofdarkness/templates/actor/parts/description.hbs" proseheadline="wod.bio.appearance" prosename="system.bio.appearance" prosevalue=appearance proseenriched=enrichedAppearance}}
+			{{> "systems/vtm20-2e-saa/templates/actor/parts/description.hbs" proseheadline="wod.bio.appearance" prosename="system.bio.appearance" prosevalue=appearance proseenriched=enrichedAppearance}}
 
 			{{#if (ne (checkSystemsetting "viewBiotabPermission") "mini")}}
-				{{> "systems/worldofdarkness/templates/actor/parts/description.hbs" proseheadline="wod.bio.background" prosename="system.bio.background" prosevalue=background proseenriched=enrichedBackground}}									
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/description.hbs" proseheadline="wod.bio.background" prosename="system.bio.background" prosevalue=background proseenriched=enrichedBackground}}									
 			{{/if}}
 
 			{{#if isGM}}
-				{{> "systems/worldofdarkness/templates/actor/parts/description.hbs" proseheadline="wod.bio.tips" prosename="system.bio.roleplaytip" prosevalue=roleplaytip proseenriched=enrichedRoleplaytip}}
+				{{> "systems/vtm20-2e-saa/templates/actor/parts/description.hbs" proseheadline="wod.bio.tips" prosename="system.bio.roleplaytip" prosevalue=roleplaytip proseenriched=enrichedRoleplaytip}}
 			{{/if}}
 		</div>
 	</div>	
