@@ -3,7 +3,7 @@ import { TourHelper } from "./tour.js";
 export async function tourSetup()
 {
     try {        
-        const {files} = await foundry.applications.apps.FilePicker.implementation.browse("data", 'systems/worldofdarkness/tours');
+        const {files} = await foundry.applications.apps.FilePicker.implementation.browse("data", 'systems/vtm20-2e-saa/tours');
         for(let i = 0; i < files.length; i++) {
             if(!files[i].endsWith(".json")) {
                 continue;
