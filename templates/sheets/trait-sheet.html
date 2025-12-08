@@ -31,7 +31,7 @@
 
 					{{#if (eqAny data.system.type "wod.types.othertraits" "wod.types.apocalypticform" "wod.types.shapeform" "wod.types.aspect" "wod.types.fetter" "wod.types.passion" "wod.types.resonance")}}
 						<div class="pullRight" style="width: auto;">
-							{{> "systems/worldofdarkness/templates/actor/parts/profile-img.html"}}		
+							{{> "systems/vtm20-2e-saa/templates/actor/parts/profile-img.html"}}		
 						</div>
 					{{/if}}
 				</div>				
@@ -93,12 +93,12 @@
 			</div>
 
 			{{#if (eq data.system.type "wod.types.apocalypticform")}}			
-				{{> "systems/worldofdarkness/templates/sheets/parts/item_bonus.html"}}
+				{{> "systems/vtm20-2e-saa/templates/sheets/parts/item_bonus.html"}}
 			{{/if}}
 
 			{{#if (eqAny data.system.type "wod.types.othertraits" "wod.types.shapeform" "wod.types.aspect")}}
 
-				{{> "systems/worldofdarkness/templates/sheets/parts/item_bonus.html"}}
+				{{> "systems/vtm20-2e-saa/templates/sheets/parts/item_bonus.html"}}
 
 				<div class="dialog-area">
 
@@ -108,12 +108,12 @@
 					</div>
 
 					{{#if data.system.isrollable}}
-						{{> "systems/worldofdarkness/templates/sheets/parts/power_rollable.html"}}
+						{{> "systems/vtm20-2e-saa/templates/sheets/parts/power_rollable.html"}}
 					{{/if}}
 
 				</div>
 
-				{{> "systems/worldofdarkness/templates/sheets/parts/power_description.html"}}				
+				{{> "systems/vtm20-2e-saa/templates/sheets/parts/power_description.html"}}				
 
 			{{/if}}			
 
