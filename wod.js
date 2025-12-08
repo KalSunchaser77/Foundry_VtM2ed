@@ -331,49 +331,49 @@ Hooks.once("setup", function () {
 	/* CONFIG.fontDefinitions["Mortal"] = {
 		editor: true,
 		fonts: [{
-			urls: ["systems/worldofdarkness/assets/fonts/times.ttf"]
+			urls: ["systems/vtm20-2e-saa/assets/fonts/times.ttf"]
 		}]
 	};
 	CONFIG.fontDefinitions["Changeling"] = {
 		editor: true,
 		fonts: [{
-			urls: ["systems/worldofdarkness/assets/fonts/Umb000.ttf"]
+			urls: ["systems/vtm20-2e-saa/assets/fonts/Umb000.ttf"]
 		}]
 	};
 	CONFIG.fontDefinitions["Vampire"] = {
 		editor: true,
 		fonts: [{
-			urls: ["systems/worldofdarkness/assets/fonts/percexp.ttf"]
+			urls: ["systems/vtm20-2e-saa/assets/fonts/percexp.ttf"]
 		}]
 	};
 	CONFIG.fontDefinitions["Mage"] = {
 		editor: true,
 		fonts: [{
-			urls: ["systems/worldofdarkness/assets/fonts/visit.TTF"]
+			urls: ["systems/vtm20-2e-saa/assets/fonts/visit.TTF"]
 		}]
 	};
 	CONFIG.fontDefinitions["Werewolf"] = {
 		editor: true,
 		fonts: [{
-			urls: ["systems/worldofdarkness/assets/fonts/werewolf.ttf"]
+			urls: ["systems/vtm20-2e-saa/assets/fonts/werewolf.ttf"]
 		}]
 	};
 	CONFIG.fontDefinitions["Hunter"] = {
 		editor: true,
 		fonts: [{
-			urls: ["systems/worldofdarkness/assets/fonts/hunter.ttf"]
+			urls: ["systems/vtm20-2e-saa/assets/fonts/hunter.ttf"]
 		}]
 	};
 	CONFIG.fontDefinitions["Demon"] = {
 		editor: true,
 		fonts: [{
-			urls: ["systems/worldofdarkness/assets/fonts/demon.ttf"]
+			urls: ["systems/vtm20-2e-saa/assets/fonts/demon.ttf"]
 		}]
 	};
 	CONFIG.fontDefinitions["Wraith"] = {
 		editor: true,
 		fonts: [{
-			urls: ["systems/worldofdarkness/assets/fonts/Mat_____.ttf"]
+			urls: ["systems/vtm20-2e-saa/assets/fonts/Mat_____.ttf"]
 		}]
 	}; */
 });
