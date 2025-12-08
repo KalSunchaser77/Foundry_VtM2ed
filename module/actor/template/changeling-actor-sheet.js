@@ -9,7 +9,7 @@ export default class ChangelingActorSheet extends MortalActorSheet {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["wod20 wod-sheet changeling"],
-			template: "systems/worldofdarkness/templates/actor/changeling-sheet.html"
+			template: "systems/vtm20-2e-saa/templates/actor/changeling-sheet.html"
 		});
 	}
   
@@ -63,7 +63,7 @@ export default class ChangelingActorSheet extends MortalActorSheet {
 
 	/** @override */
 	get template() {
-		return "systems/worldofdarkness/templates/actor/changeling-sheet.html";
+		return "systems/vtm20-2e-saa/templates/actor/changeling-sheet.html";
 	}
 	
 	/** @override */
