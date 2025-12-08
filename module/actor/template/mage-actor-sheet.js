@@ -9,7 +9,7 @@ export default class MageActorSheet extends MortalActorSheet {
 	static get defaultOptions() {
 		return foundry.utils.mergeObject(super.defaultOptions, {
 			classes: ["wod20 wod-sheet mage"],
-			template: "systems/worldofdarkness/templates/actor/mage-sheet.html"
+			template: "systems/vtm20-2e-saa/templates/actor/mage-sheet.html"
 		});
 	}
   
@@ -41,7 +41,7 @@ export default class MageActorSheet extends MortalActorSheet {
 
 	/** @override */
 	get template() {
-		return "systems/worldofdarkness/templates/actor/mage-sheet.html";
+		return "systems/vtm20-2e-saa/templates/actor/mage-sheet.html";
 	}
 	
 	/** @override */
