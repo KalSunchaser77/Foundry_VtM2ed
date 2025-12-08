@@ -361,11 +361,11 @@ export class WoDActor extends Actor {
     async _handleWoundLevelCalculations(actorData) {
         try
         {
-            let totalNormWoundLevels = parseInt(actorData.system.health.damage.bashing) + parseInt(actorData.system.health.damage.lethal) + parseInt(actorData.system.health.damage.aggravated);
+            let totalNormWoundLevels = parseInt(actorData.system.health.damage.bashing) + parseInt(actorData.system.health.damage.aggravated);
             let totalChimericalWoundLevels = 0;
             
             if (actorData.system.health.damage.chimerical != undefined) {
-                totalChimericalWoundLevels = parseInt(actorData.system.health.damage.chimerical.bashing) + parseInt(actorData.system.health.damage.chimerical.lethal) + parseInt(actorData.system.health.damage.chimerical.aggravated);
+                totalChimericalWoundLevels = parseInt(actorData.system.health.damage.chimerical.bashing) + parseInt(actorData.system.health.damage.chimerical.aggravated);
             }
     
             let totalWoundLevels = totalNormWoundLevels < totalChimericalWoundLevels ? totalChimericalWoundLevels : totalNormWoundLevels;
@@ -884,7 +884,7 @@ export class WoDActor extends Actor {
         
         if (actorData.system.advantages.corpus.permanent < actorData.system.advantages.corpus.temporary) {
             // has to check the health levels
-            if ((actorData.system.health.damage.corpus.bashing + actorData.system.health.damage.corpus.lethal + actorData.system.health.damage.corpus.aggravated) > actorData.system.advantages.corpus.permanent) {
+            if ((actorData.system.health.damage.corpus.bashing + actorData.system.health.damage.corpus.aggravated) > actorData.system.advantages.corpus.permanent) {
                 let diff = actorData.system.advantages.corpus.temporary - actorData.system.advantages.corpus.permanent;
 
                 if ((actorData.system.health.damage.corpus.bashing > 0) && (diff > 0)) {
@@ -895,16 +895,6 @@ export class WoDActor extends Actor {
                     else {
                         diff -= actorData.system.health.damage.corpus.bashing;
                         actorData.system.health.damage.corpus.bashing = 0;
-                    }
-                }
-                if ((actorData.system.health.damage.corpus.lethal > 0) && (diff > 0)) {
-                    if (actorData.system.health.damage.corpus.lethal >= diff) {
-                        actorData.system.health.damage.corpus.lethal -= diff;
-                        diff = 0;                        
-                    }
-                    else {
-                        diff -= actorData.system.health.damage.corpus.lethal;
-                        actorData.system.health.damage.corpus.lethal = 0;
                     }
                 }
                 if ((actorData.system.health.damage.corpus.aggravated > 0) && (diff > 0)) {
