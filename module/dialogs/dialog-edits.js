@@ -79,7 +79,7 @@ export class DialogBio extends FormApplication {
 
     /** @override */
 	get template() {
-        return "systems/worldofdarkness/templates/dialogs/dialog-attribute.hbs";
+        return "systems/vtm20-2e-saa/templates/dialogs/dialog-attribute.hbs";
 	}    
 
     getData() {
@@ -160,7 +160,7 @@ export class DialogAttribute extends FormApplication {
 
     /** @override */
 	get template() {
-        return "systems/worldofdarkness/templates/dialogs/dialog-attribute.hbs";
+        return "systems/vtm20-2e-saa/templates/dialogs/dialog-attribute.hbs";
 	}    
 
     getData() {
@@ -229,7 +229,7 @@ export class DialogAbility extends FormApplication {
 
     /** @override */
 	get template() {
-        return "systems/worldofdarkness/templates/dialogs/dialog-attribute.hbs";
+        return "systems/vtm20-2e-saa/templates/dialogs/dialog-attribute.hbs";
 	}    
 
     getData() {
@@ -318,7 +318,7 @@ export class DialogSphere extends FormApplication {
 
     /** @override */
 	get template() {
-        return "systems/worldofdarkness/templates/dialogs/dialog-attribute.hbs";
+        return "systems/vtm20-2e-saa/templates/dialogs/dialog-attribute.hbs";
 	}    
 
     getData() {
