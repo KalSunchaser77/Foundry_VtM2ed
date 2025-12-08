@@ -4,7 +4,7 @@
         <div class="sheet-headline sheet-banner splatFont" data-area="lores"><span class="sheet-banner-text">{{localize "wod.power.lores"}}</span></div>
 
         {{#each (getMainPowerList actor "wod.types.lore") as |item id|}}
-            {{> "systems/worldofdarkness/templates/actor/parts/mainpower_list.hbs" mainpower=item config=../config actor=../actor locked=../locked}}
+            {{> "systems/vtm20-2e-saa/templates/actor/parts/mainpower_list.hbs" mainpower=item config=../config actor=../actor locked=../locked}}
         {{/each}}
     </div>
 </div>
@@ -41,7 +41,7 @@
         <div class="sheet-headline sheet-banner splatFont" data-area="rituals"><span class="sheet-banner-text">{{localize "wod.power.rituals"}}</span></div>
 
         {{#each (getMainPowerList actor "wod.types.ritual") as |item id|}}
-            {{> "systems/worldofdarkness/templates/actor/parts/power_list.hbs" item=item config=../config actor=../actor locked=../locked showclear=false}}
+            {{> "systems/vtm20-2e-saa/templates/actor/parts/power_list.hbs" item=item config=../config actor=../actor locked=../locked showclear=false}}
         {{/each}}
     </div>
 </div>
@@ -49,6 +49,6 @@
 <div class="sheet-area flex-columns" style="width: 50%;">
 
     <!-- Forms -->
-    {{>"systems/worldofdarkness/templates/actor/parts/demon/forms.hbs"}}
+    {{>"systems/vtm20-2e-saa/templates/actor/parts/demon/forms.hbs"}}
 
 </div>
