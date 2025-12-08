@@ -274,10 +274,6 @@ export  const updates = async () => {
             updateData.system.settings.soak.bashing.isrollable = updateData.system.settings.soak.bashing.roll;            
         }
 
-        if(updateData.system.settings.soak.lethal.roll != undefined) {
-            updateData.system.settings.soak.lethal.isrollable = updateData.system.settings.soak.lethal.roll;            
-        }        
-
         if(updateData.system.settings.soak.aggravated.roll != undefined) {
             updateData.system.settings.soak.aggravated.isrollable = updateData.system.settings.soak.aggravated.roll;            
         }        
@@ -342,7 +338,6 @@ export  const updates = async () => {
 
         updateData.system.settings['-=created'] = null;
         updateData.system.settings.soak.bashing['-=roll'] = null;
-        updateData.system.settings.soak.lethal['-=roll'] = null;
         updateData.system.settings.soak.aggravated['-=roll'] = null;
 
         updateData.system.conditions['-=ignorepain'] = null;
