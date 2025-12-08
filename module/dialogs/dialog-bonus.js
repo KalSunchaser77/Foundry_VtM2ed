@@ -31,7 +31,7 @@ export class DialogBonus extends FormApplication {
 
     /** @override */
 	get template() {
-        return "systems/worldofdarkness/templates/dialogs/dialog-bonus.hbs";
+        return "systems/vtm20-2e-saa/templates/dialogs/dialog-bonus.hbs";
 	}    
 
     async getData() {
