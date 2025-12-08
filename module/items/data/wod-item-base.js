@@ -57,7 +57,8 @@ export class WoDItem extends Item {
 			item = this;
 			let updated = false;
 			updateData = foundry.utils.duplicate(item);
-
+		    // 🔧 Disable auto-icon override for Powers
+			/*
 			if (updateData.type == "Power") {
 				const imgUrl = _getImage(updateData);
 
@@ -66,6 +67,7 @@ export class WoDItem extends Item {
 					updated = true;
 				}            
 			}
+			*/
 
 			if (updateData?.flags?.copyFile !== undefined) {
 				updateData.flags.copyFile = null;
