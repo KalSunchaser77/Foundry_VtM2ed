@@ -76,7 +76,7 @@ export class DialogRoll extends FormApplication {
 
     /** @override */
 	get template() {
-        return "systems/worldofdarkness/templates/dialogs/dialog-item.hbs";
+        return "systems/vtm20-2e-saa/templates/dialogs/dialog-item.hbs";
 	}    
 
     async getData() {
