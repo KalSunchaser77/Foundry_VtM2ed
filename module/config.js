@@ -248,7 +248,8 @@ wod.attackMeleeAbilities = {
 } 
 
 wod.attackRangedAbilities = {
-    athletics: "wod.abilities.athletics",
+    alertness: "wod.abilities.alertness",
+	athletics: "wod.abilities.athletics",
     firearms: "wod.abilities.firearms",
     brawl: "wod.abilities.brawl",
     martialarts: "wod.abilities.martialarts",
