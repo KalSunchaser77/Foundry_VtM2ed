@@ -233,6 +233,7 @@ wod.attackAttributes = {
     strength: "wod.attributes.strength",
     dexterity: "wod.attributes.dexterity",
     manipulation: "wod.attributes.manipulation",
+    perception: "wod.attributes.perception",
     wits: "wod.attributes.wits"
 }
 
