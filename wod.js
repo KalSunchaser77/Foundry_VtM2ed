@@ -424,6 +424,43 @@ Hooks.on('createItem', async (item, options, userId) => {
 });
 
 
+//
+// 🔽 ADD THIS BLOCK DIRECTLY UNDER createItem, BEFORE renderActorSheet 🔽
+//
+Hooks.on("createActor", async (actor, options, userId) => {
+  // Only the GM should auto-add items so we don't get duplicates
+  if (!game.user.isGM) return;
+
+  // Limit to the actor types you want defaults on
+  // (adjust this list if you later want Mortals, Creatures, etc.)
+  const allowedTypes = ["Vampire"];
+  if (!allowedTypes.includes(actor.type)) return;
+
+  // Get the compendium that holds Punch/Kick/Bite
+  const pack = game.packs.get("vtm20-2e-saa.vtm2e-default-attacks");
+  if (!pack) {
+    console.warn("VtM 2E – Default Attacks compendium not found.");
+    return;
+  }
+
+  // Names of the default attacks to add
+  const defaultNames = ["Punch", "Kick", "Bite"];
+
+  // Load all documents from the pack
+  const docs = await pack.getDocuments();
+
+  // Filter for our attack items and convert them to plain data
+  const itemsToAdd = docs
+    .filter(i => defaultNames.includes(i.name))
+    .map(i => i.toObject());
+
+  if (!itemsToAdd.length) return;
+
+  // Create them as embedded Items on the new actor
+  await actor.createEmbeddedDocuments("Item", itemsToAdd);
+});
+  // ... (rest of renderActorSheet as you already have it)
+
 Hooks.on("renderActorSheet", (sheet) => { 
 	const useSplatFonts = game.settings.get('worldofdarkness', 'useSplatFonts');
 	CONFIG.worldofdarkness.darkmode = game.settings.get('core', 'uiConfig').colorScheme.applications === "dark";
