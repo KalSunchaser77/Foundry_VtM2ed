@@ -1,0 +1,8 @@
+2025/12/10-13:50:15.242 9cf4 Recovering log #230
+2025/12/10-13:50:15.256 9cf4 Delete type=0 #230
+2025/12/10-13:50:15.256 9cf4 Delete type=3 #228
+2025/12/10-13:54:13.524 b198 Level-0 table #235: started
+2025/12/10-13:54:13.524 b198 Level-0 table #235: 0 bytes OK
+2025/12/10-13:54:13.530 b198 Delete type=0 #233
+2025/12/10-13:54:13.550 b198 Manual compaction at level-0 from '!journal!PM8AAOQAboHc9FWi' @ 72057594037927935 : 1 .. '!journal.pages!tFBnWzX8O9f3VHbi.ua0RNhPNPo5z5CeQ' @ 0 : 0; will stop at (end)
+2025/12/10-13:54:13.566 b198 Manual compaction at level-1 from '!journal!PM8AAOQAboHc9FWi' @ 72057594037927935 : 1 .. '!journal.pages!tFBnWzX8O9f3VHbi.ua0RNhPNPo5z5CeQ' @ 0 : 0; will stop at (end)
