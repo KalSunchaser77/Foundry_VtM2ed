@@ -24,21 +24,20 @@ import { DialogGeneralRoll, GeneralRoll } from "./module/dialogs/dialog-generalr
 import IconHelper from "./module/scripts/icons.js";
 
 const SheetTypes = [
-	"Mortal",
-	"Werewolf",			
-	"Mage",
 	"Vampire",
+	"Mortal",
+	"Creature"
+	"Werewolf",			
+	"Wraith",
+	"Mage",
 	"Changeling",
 	"Hunter",
+	"Changing Breed",
 	"Demon",
-	"Wraith",
 	"Mummy",
-	"Exalted",
-	"Changing Breed"
+	"Exalted"
 ];
-const AdversaryTypes = [
-	"Creature"
-];
+const AdversaryTypes = [];
 const PowerCreationItemTypes = [
 	"Power",
 	"Rote"
@@ -687,12 +686,28 @@ function clearHTML(sheet) {
 }
 
 function constructOptGroup(select, groupLabel, optValues) {
-	const options = select.querySelectorAll(":scope > option");
-	const optgroup = document.createElement("optgroup");
-	optgroup.label = groupLabel;
-	optgroup.append(...Array.from(options).filter((option) => !optValues || optValues.includes(option.value)));
-	if (optgroup.children.length == 0) {
-		return "";
-	}
-	return optgroup;
+  const options = select.querySelectorAll(":scope > option");
+  const optgroup = document.createElement("optgroup");
+  optgroup.label = groupLabel;
+
+  // Filter to only the options that belong in this group
+  let filtered = Array.from(options).filter((option) => !optValues || optValues.includes(option.value));
+
+  // If we have an explicit order list, sort options to match that order
+  if (optValues && Array.isArray(optValues)) {
+    filtered.sort((a, b) => {
+      const ai = optValues.indexOf(a.value);
+      const bi = optValues.indexOf(b.value);
+      // If something’s missing from optValues, push it to the end
+      return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
+    });
+  }
+
+  optgroup.append(...filtered);
+
+  if (optgroup.children.length === 0) {
+    return "";
+  }
+
+  return optgroup;
 }
