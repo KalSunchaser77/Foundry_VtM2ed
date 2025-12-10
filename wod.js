@@ -26,7 +26,7 @@ import IconHelper from "./module/scripts/icons.js";
 const SheetTypes = [
 	"Vampire",
 	"Mortal",
-	"Creature"
+	"Creature",
 	"Werewolf",			
 	"Wraith",
 	"Mage",
