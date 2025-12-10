@@ -437,14 +437,14 @@ Hooks.on("createActor", async (actor, options, userId) => {
   if (!allowedTypes.includes(actor.type)) return;
 
   // Get the compendium that holds Punch/Kick/Bite
-  const pack = game.packs.get("vtm20-2e-saa.vtm2e-default-attacks");
+  const pack = game.packs.get("vtm-2e-weapons-and-items");
   if (!pack) {
     console.warn("VtM 2E – Default Attacks compendium not found.");
     return;
   }
 
   // Names of the default attacks to add
-  const defaultNames = ["Punch", "Kick", "Bite"];
+  const defaultNames = ["Bite", "Punch", "Grapple", "Kick","Body slam"];
 
   // Load all documents from the pack
   const docs = await pack.getDocuments();
