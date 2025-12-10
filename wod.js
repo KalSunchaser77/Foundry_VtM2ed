@@ -444,7 +444,7 @@ Hooks.on("createActor", async (actor, options, userId) => {
   }
 
   // Names of the default attacks to add
-  const defaultNames = ["Bite", "Punch", "Grapple", "Kick","Body slam"];
+  const defaultNames = ["Bite", "Punch", "Grapple", "Kick", "Body slam"];
 
   // Load all documents from the pack
   const docs = await pack.getDocuments();
