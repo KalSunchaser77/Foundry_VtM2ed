@@ -28,14 +28,14 @@ const SheetTypes = [
 	"Mortal",
 	"Creature",
 	"Werewolf",
-	"Wraith"
-	/* "Mage",
+	"Wraith",
+	"Mage",
 	"Changeling",
 	"Hunter",
 	"Changing Breed",
 	"Demon",
 	"Mummy",
-	"Exalted" */
+	"Exalted"
 ];
 const AdversaryTypes = [];
 const PowerCreationItemTypes = [
