@@ -166,7 +166,7 @@ export class DialogVariant extends FormApplication {
     } catch (err) {
       console.error("VtM 2E – Failed to auto-apply default Vampire variant:", err);
     } finally {
-      // Immediately close the dialog so the user never has to click anything
+      // Just in case someone *does* open it manually somehow
       super.close();
     }
   }
