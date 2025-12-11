@@ -427,11 +427,20 @@ Hooks.on('createItem', async (item, options, userId) => {
 // 🔽 ADD THIS BLOCK DIRECTLY UNDER createItem, BEFORE renderActorSheet 🔽
 //
 Hooks.on("createActor", async (actor, options, userId) => {
-  // Only the GM should auto-add items so we don't get duplicates
+  // 🔹 Always make Vampires default to "standard/general" variant
+  if (actor.type === "Vampire") {
+    await actor.update({
+      "system.settings.variant": "general",
+      "system.settings.hasbloodpool": true,
+      "system.settings.hasvirtue": true,
+      "system.settings.haspath": true
+    });
+  }
+
+  // 🔹 Only the GM should auto-add items so we don't get duplicates
   if (!game.user.isGM) return;
 
   // Limit to the actor types you want defaults on
-  // (adjust this list if you later want Mortals, Creatures, etc.)
   const allowedTypes = ["Vampire"];
   if (!allowedTypes.includes(actor.type)) return;
 
