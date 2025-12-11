@@ -121,22 +121,37 @@ async _save() {
     this.close();
 }
 
-  async render(force = false, options = {}) {
-    // For Vampires, silently apply the Standard variant and skip the UI
-    if (this.actor?.type === CONFIG.worldofdarkness.sheettype.vampire) {
-      // Ensure we have a variant value; default to "general" (Standard)
-      if (!this.object.variant) {
-        this.object.variant = "general";
-      }
+/** 
+ * Silently apply the default Vampire variant (“general”),
+ * open the actor sheet, then close the dialog.
+ */
+async _applyVampireDefault() {
+  try {
+    const actorData = foundry.utils.duplicate(this.actor);
+    const variant = this.object.variant || "general";
 
-      // Reuse the existing helper so we don’t duplicate logic
-      await this._applyVampireDefault();
+    // Apply the same logic the dialog would have used
+    await CreateHelper.SetVampireVariant(actorData, variant);
+    actorData.system.settings.isupdated = false;
 
-      // Do NOT call super.render – this prevents the window from ever opening
-      return this;
+    // Update the actual Actor document
+    await this.actor.update(actorData);
+
+    // Add any variant-dependent items (if configured)
+    await CreateHelper.SetVariantItems(
+      this.actor,
+      variant,
+      game.data.system.version
+    );
+
+    // 🔹 Explicitly open the newly created Vampire’s sheet
+    if (this.actor.sheet) {
+      this.actor.sheet.render(true);
     }
-
-    // Non-vampire splats behave as normal
-    return super.render(force, options);
+  } catch (err) {
+    console.error("VtM 2E – Failed to auto-apply default Vampire variant:", err);
+  } finally {
+    // Just in case, make sure the dialog itself is closed
+    super.close();
   }
 }
