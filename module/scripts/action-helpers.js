@@ -511,11 +511,21 @@ export default class ActionHelper {
 		return;
     }	
 
-	static openVariantDialog(actor) {
-		const variant = new VariantDialog.Variant(actor);
-		let dialog = new VariantDialog.DialogVariant(actor, variant);
-		dialog.render(true);
-	}
+static openVariantDialog(actor) {
+  // 👇 If the actor is a Vampire, skip the variant dialog entirely
+  if (actor.type === CONFIG.worldofdarkness.sheettype.vampire) {
+    // Just open the sheet as usual
+    if (actor.sheet) {
+      actor.sheet.render(true);
+    }
+    return;
+  }
+
+  // For all other types, keep the normal variant dialog behavior
+  const variant = new VariantDialog.Variant(actor);
+  let dialog = new VariantDialog.DialogVariant(actor, variant);
+  dialog.render(true);
+}
 
 	static RollParadox(event, actor) {
 		event.preventDefault();
