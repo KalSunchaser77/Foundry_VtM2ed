@@ -251,8 +251,7 @@ export default class SelectHelper {
                     "wod.types.disciplinepower": game.i18n.localize("wod.types.disciplinepower"),
                     "wod.types.disciplinepath": game.i18n.localize("wod.types.disciplinepath"),
                     "wod.types.disciplinepathpower": game.i18n.localize("wod.types.disciplinepathpower"),
-                    "wod.types.ritual": game.i18n.localize("wod.types.ritual"),
-                    "wod.types.combination": game.i18n.localize("wod.types.combination")
+                    "wod.types.ritual": game.i18n.localize("wod.types.ritual")
                 }
             }
             if (data.system.game == "werewolf") {
