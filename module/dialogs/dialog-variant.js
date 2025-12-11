@@ -1,50 +1,17 @@
 import CreateHelper from "../scripts/create-helpers.js";
 
-export class Variant {
-  constructor(actor) {
-    this.canRoll = false;
-    this.close = false;
-
-    // Default variant per type
-    if (actor.type === CONFIG.worldofdarkness.sheettype.changeling) {
-      // Keep whatever variant the Changeling already has
-      this.variant = actor.system.settings.variant;
-    } else if (actor.type === CONFIG.worldofdarkness.sheettype.changingbreed) {
-      // For Changing Breeds, variant is stored on the actor
-      this.variant = actor.system.changingbreed;
-    } else if (actor.type === CONFIG.worldofdarkness.sheettype.vampire) {
-      // 👇 NEW: Vampires automatically default to “general”
-      this.variant = "general";
-    } else {
-      this.variant = "";
-    }
-
-    // Used later in _save to decide which helper to call
-    this.type = actor.type;
-  }
-}
-
 export class DialogVariant extends FormApplication {
-  constructor(actor, variant) {
-    super(variant, { submitOnChange: true, closeOnSubmit: false });
+	constructor(actor, variant) {
+		// "variant" is the data context for the dialog
+		super(variant, {
+			submitOnChange: true,
+			closeOnSubmit: false
+		});
 
-    this.actor = actor;
-    this.isDialog = true;
-    this.options.title = `${this.actor.name}`;
-
-    // 👇 NEW: For Vampires, auto-apply the default and never show the prompt
-    if (this.actor.type === CONFIG.worldofdarkness.sheettype.vampire) {
-      // Make sure the underlying Variant object has something sane
-      if (!this.object.variant) {
-        this.object.variant = "general";
-      }
-
-      // Defer so FormApplication finishes constructing before we update the actor
-      setTimeout(() => {
-        this._applyVampireDefault();
-      }, 0);
-    }
-  }
+		this.actor = actor;
+		this.isDialog = true;
+		this.options.title = `${this.actor.name}`;
+	}
 
   /**
    * Default dialog options
@@ -80,6 +47,27 @@ export class DialogVariant extends FormApplication {
     html.find(".savebutton").click(this._save.bind(this));
   }
 
+  /* added */
+  async render(force = false, options = {}) {
+    // For Vampires, silently apply the Standard variant and skip the UI
+    if (this.actor?.type === CONFIG.worldofdarkness.sheettype.vampire) {
+      // Ensure we have a variant value; default to "general" (Standard)
+      if (!this.object.variant) {
+        this.object.variant = "general";
+      }
+
+      // Reuse the existing helper so we don’t duplicate logic
+      await this._applyVampireDefault();
+
+      // Do NOT call super.render – this prevents the window from ever opening
+      return this;
+    }
+
+    // Non-vampire splats behave as normal
+    return super.render(force, options);
+  }
+/*end added */
+  
   async _updateObject(event, formData) {
     if (this.object.close) {
       this.close();
