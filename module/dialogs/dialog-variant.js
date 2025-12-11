@@ -101,6 +101,9 @@ export class DialogVariant extends FormApplication {
         if (this.object.type == CONFIG.worldofdarkness.sheettype.changeling) {
             await CreateHelper.SetChangingVariant(actorData, this.object.variant);
         }
+        else if (this.object.type == CONFIG.worldofdarkness.sheettype.vampire) {
+            await CreateHelper.SetVampireVariant(actorData, this.object.variant);
+        }
         else if (this.object.type == CONFIG.worldofdarkness.sheettype.wraith) {
             actorData.system.settings.variant = this.object.variant;
         }
