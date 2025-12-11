@@ -27,7 +27,7 @@ const SheetTypes = [
 	"Vampire",
 	"Mortal",
 	"Creature",
-	"Werewolf",			
+	"Werewolf",
 	"Wraith",
 	"Mage",
 	"Changeling",
