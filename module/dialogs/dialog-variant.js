@@ -122,36 +122,28 @@ async _save() {
 }
 
 /** 
- * Silently apply the default Vampire variant (“general”),
- * open the actor sheet, then close the dialog.
+ * NEW: silently apply the default Vampire variant (“general”) and close.
+ * This is what gets called automatically from the constructor for Vampires.
  */
 async _applyVampireDefault() {
   try {
     const actorData = foundry.utils.duplicate(this.actor);
     const variant = this.object.variant || "general";
 
-    // Apply the same logic the dialog would have used
     await CreateHelper.SetVampireVariant(actorData, variant);
     actorData.system.settings.isupdated = false;
 
-    // Update the actual Actor document
     await this.actor.update(actorData);
 
-    // Add any variant-dependent items (if configured)
     await CreateHelper.SetVariantItems(
       this.actor,
       variant,
       game.data.system.version
     );
-
-    // 🔹 Explicitly open the newly created Vampire’s sheet
-    if (this.actor.sheet) {
-      this.actor.sheet.render(true);
-    }
   } catch (err) {
     console.error("VtM 2E – Failed to auto-apply default Vampire variant:", err);
   } finally {
-    // Just in case, make sure the dialog itself is closed
+    // Just in case someone *does* open it manually somehow
     super.close();
   }
 }
