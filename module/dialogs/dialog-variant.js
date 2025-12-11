@@ -104,45 +104,34 @@ export class DialogVariant extends FormApplication {
     this.render();
   }
 
-  async _save(event) {
-    event.preventDefault();
-
-    // For non-vampire types, we still enforce picking a variant
-    if (!this.object.variant) {
-      ui.notifications.warn(game.i18n.localize("wod.dialog.variant.notype"));
-      return;
-    }
-
-    const actorData = foundry.utils.duplicate(this.actor);
-
-    if (this.object.type === CONFIG.worldofdarkness.sheettype.changeling) {
-      await CreateHelper.SetChangingVariant(actorData, this.object.variant);
-    } else if (this.object.type === CONFIG.worldofdarkness.sheettype.vampire) {
-      // Still support manually changing vampire variants if someone ever calls this
-      await CreateHelper.SetVampireVariant(actorData, this.object.variant);
-    } else if (this.object.type === CONFIG.worldofdarkness.sheettype.wraith) {
-      actorData.system.settings.variant = this.object.variant;
-    } else if (this.object.type === CONFIG.worldofdarkness.sheettype.changingbreed) {
-      await CreateHelper.SetShifterAttributes(actorData, this.object.variant);
-    } else if (this.object.type === CONFIG.worldofdarkness.sheettype.mortal) {
-      await CreateHelper.SetMortalVariant(this.actor, actorData, this.object.variant);
-    } else if (this.object.type === CONFIG.worldofdarkness.sheettype.creature) {
-      await CreateHelper.SetCreatureVariant(actorData, this.object.variant);
+async _save() {
+    // If this is a vampire and nothing was chosen, silently default to "general"
+    if (this.actor.type === CONFIG.worldofdarkness.sheettype.vampire) {
+        if (!this.object.variant) {
+            this.object.variant = "general";
+        }
     } else {
-      actorData.system.settings.variant = this.object.variant;
+        // For non-vampire types, the user must explicitly pick something
+        if (!this.object.variant) {
+            ui.notifications.warn(game.i18n.localize("wod.warning.varianttype"));
+            return;
+        }
     }
 
-    actorData.system.settings.isupdated = false;
-
-    await this.actor.update(actorData);
-    await CreateHelper.SetVariantItems(
-      this.actor,
-      this.object.variant,
-      game.data.system.version
-    );
+    if (this.actor.type === CONFIG.worldofdarkness.sheettype.vampire) {
+        await CreateHelper.SetVampireVariant(this.actor, this.object.variant);
+    } else if (this.actor.type === CONFIG.worldofdarkness.sheettype.changeling) {
+        await CreateHelper.SetChangelingVariant(this.actor, this.object.variant);
+    } else if (this.actor.type === CONFIG.worldofdarkness.sheettype.changingbreed) {
+        await CreateHelper.SetChangingVariant(this.actor, this.object.variant);
+    } else if (this.actor.type === CONFIG.worldofdarkness.sheettype.mortal) {
+        await CreateHelper.SetMortalVariant(this.actor, this.object, this.object.variant);
+    } else if (this.actor.type === CONFIG.worldofdarkness.sheettype.creature) {
+        await CreateHelper.SetCreatureVariant(this.actor, this.object.variant);
+    }
 
     this.close();
-  }
+}
 
   /**
    * NEW: silently apply the default Vampire variant (“general”) and close.
