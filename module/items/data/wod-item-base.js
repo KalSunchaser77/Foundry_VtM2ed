@@ -29,25 +29,31 @@ export class WoDItem extends Item {
    * @param options - Additional options which modify the creation request
    * @param userId - The id of the User requesting the document update
   */
-    async _onCreate(data, options, userId) {
-        await super._onCreate(data, options, userId);
+async _onCreate(data, options, userId) {
+  await super._onCreate(data, options, userId);
 
-        try {
-            let data = foundry.utils.duplicate(this);
+  try {
+    // Only auto-set an icon if the item still has the default image
+    const currentImg = this.img;
 
-            const imgUrl = _getImage(data);
+    // Foundry’s default item icon
+    const defaultImg = "icons/svg/item-bag.svg";
 
-            if (imgUrl != "") {
-                data.img = imgUrl;
+    if (!currentImg || currentImg === defaultImg) {
+      const cloned = foundry.utils.duplicate(this);
+      const imgUrl = _getImage(cloned);
 
-                await this.update(data);
-            }	
-        }
-        catch (err) {
-            err.message = `Failed _onCreate Item ${data.name}: ${err.message}`;
-            console.error(err);
-        } 
+      if (imgUrl) {
+        await this.update({ img: imgUrl });
+      }
     }
+  }
+  catch (err) {
+    err.message = `Failed _onCreate Item ${this.name}: ${err.message}`;
+    console.error(err);
+  }
+}
+
 
 	async _onUpdate(updateData, options, user) {
 		super._onUpdate(updateData, options, user);   
