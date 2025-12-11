@@ -202,12 +202,12 @@ export default class SelectHelper {
 
             listData.Games = {
                 "": "- " + game.i18n.localize("wod.labels.select") + " -",
+                "vampire": game.i18n.localize("wod.games.vampire"),
                 "changeling": game.i18n.localize("wod.games.changeling"),
                 "demon": game.i18n.localize("wod.games.demon"),
                 "hunter": game.i18n.localize("wod.games.hunter"),
                 "mummy": game.i18n.localize("wod.games.mummy"),
                 "mage": game.i18n.localize("wod.games.mage"),
-                "vampire": game.i18n.localize("wod.games.vampire"),
                 "werewolf": game.i18n.localize("wod.games.werewolf"),
                 "wraith": game.i18n.localize("wod.games.wraith"),
                 "orpheus": game.i18n.localize("wod.games.orpheus"),
