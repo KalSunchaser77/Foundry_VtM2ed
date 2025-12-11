@@ -615,22 +615,32 @@ Hooks.on("renderFormApplication", (sheet) => {
 });
 
 Hooks.on("renderDialog", (_dialog, html, _data) => {
-	const container = html[0];
-	CONFIG.worldofdarkness.darkmode = game.settings.get('core', 'uiConfig').colorScheme.applications === "dark";
+  const container = html[0];
+  CONFIG.worldofdarkness.darkmode = game.settings.get('core', 'uiConfig').colorScheme.applications === "dark";
 
-	if (container.classList.contains("dialog")) {
-		const select = container.querySelector("select[name=type]");
-		if (select) {
-			select.append(
-				constructOptGroup(select, game.i18n.localize("wod.sheets.items"), CharacterCreationItemTypes),
-				constructOptGroup(select, game.i18n.localize("wod.sheets.powers"), PowerCreationItemTypes),
-				constructOptGroup(select, game.i18n.localize("wod.sheets.equipment"), EquipmentItemTypes),
-				constructOptGroup(select, game.i18n.localize("wod.sheets.sheets"), SheetTypes),
-				constructOptGroup(select, game.i18n.localize("wod.sheets.npc"), AdversaryTypes)
-			);
-			select.querySelector("option").selected = true;
-		}
-	} 
+  if (!container.classList.contains("dialog")) return;
+
+  const select = container.querySelector("select[name=type]");
+  if (!select) return;
+
+  // Build groups based on the *original* flat options
+  const itemsGroup      = constructOptGroup(select, game.i18n.localize("wod.sheets.items"),     CharacterCreationItemTypes);
+  const powersGroup     = constructOptGroup(select, game.i18n.localize("wod.sheets.powers"),    PowerCreationItemTypes);
+  const equipmentGroup  = constructOptGroup(select, game.i18n.localize("wod.sheets.equipment"), EquipmentItemTypes);
+  const sheetsGroup     = constructOptGroup(select, game.i18n.localize("wod.sheets.sheets"),    SheetTypes);
+  const npcGroup        = constructOptGroup(select, game.i18n.localize("wod.sheets.npc"),       AdversaryTypes);
+
+  // 🔥 Important: remove the original alphabetical options
+  select.innerHTML = "";
+
+  // Re-attach only our ordered groups (in the order we want)
+  for (const group of [itemsGroup, powersGroup, equipmentGroup, sheetsGroup, npcGroup]) {
+    if (group) select.appendChild(group);
+  }
+
+  // Default to the first option in the first non-empty group
+  const firstOption = select.querySelector("option");
+  if (firstOption) firstOption.selected = true;
 });
 
 Hooks.once("dragRuler.ready", (SpeedProvider) => {
@@ -686,27 +696,30 @@ function clearHTML(sheet) {
 }
 
 function constructOptGroup(select, groupLabel, optValues) {
-  const options = select.querySelectorAll(":scope > option");
+  // Grab all current flat options from this select
+  const options = Array.from(select.querySelectorAll(":scope > option"));
   const optgroup = document.createElement("optgroup");
   optgroup.label = groupLabel;
 
-  // Filter to only the options that belong in this group
-  let filtered = Array.from(options).filter((option) => !optValues || optValues.includes(option.value));
+  // Narrow down to the options that belong in this group
+  let filtered = options;
+  if (optValues && optValues.length) {
+    filtered = options.filter(option => optValues.includes(option.value));
 
-  // If we have an explicit order list, sort options to match that order
-  if (optValues && Array.isArray(optValues)) {
+    // Sort them according to the order in optValues
     filtered.sort((a, b) => {
       const ai = optValues.indexOf(a.value);
       const bi = optValues.indexOf(b.value);
-      // If something’s missing from optValues, push it to the end
       return (ai === -1 ? 999 : ai) - (bi === -1 ? 999 : bi);
     });
   }
 
-  optgroup.append(...filtered);
+  // If nothing belongs to this group, skip it
+  if (!filtered.length) return null;
 
-  if (optgroup.children.length === 0) {
-    return "";
+  // Move options into this optgroup
+  for (const option of filtered) {
+    optgroup.appendChild(option);
   }
 
   return optgroup;
