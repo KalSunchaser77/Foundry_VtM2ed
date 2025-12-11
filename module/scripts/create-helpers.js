@@ -578,22 +578,17 @@ export default class CreateHelper {
 		return actorData;
 	}
 
-	static async SetVampireVariant(actorData, variant) {
-		actorData.system.settings.variant = variant;
+static async SetVampireVariant(actorData, variant) {
+    // Always treat Vampires as "standard" (general) in this fork.
+    // Ignore any incoming variant (including "kindredeast").
+    actorData.system.settings.variant = "general";
 
-		if (actorData.system.settings.variant == 'general') {
-			actorData.system.settings.hasbloodpool = true;	
-			actorData.system.settings.hasvirtue = true;
-			actorData.system.settings.haspath = true;
-		}
-		if (actorData.system.settings.variant == 'kindredeast') {
-			actorData.system.settings.hasbloodpool = false;	
-			actorData.system.settings.hasvirtue = false;
-			actorData.system.settings.haspath = false;
-		}
+    actorData.system.settings.hasbloodpool = true;	
+    actorData.system.settings.hasvirtue = true;
+    actorData.system.settings.haspath = true;
 
-		return actorData;
-	}
+    return actorData;
+}
 
 	static async SetExaltedVariant(actorData, variant) {
 		actorData.system.settings.variant = variant;
