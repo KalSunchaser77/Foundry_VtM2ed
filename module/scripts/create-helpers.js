@@ -695,7 +695,7 @@ static async SetVampireVariant(actorData, variant) {
 
 		actorData.system.settings.haswillpower = true;
 		actorData.system.settings.soak.bashing.isrollable = true;
-		actorData.system.settings.powers.haspowers = true;	
+		actorData.system.settings.powers.haspowers = false;	
 		
 		actorData.system.settings.hasrage = false;
 		actorData.system.settings.hasgnosis = false;						
