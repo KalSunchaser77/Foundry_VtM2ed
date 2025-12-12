@@ -700,7 +700,7 @@ static async SetVampireVariant(actorData, variant) {
 		actorData.system.settings.hasrage = false;
 		actorData.system.settings.hasgnosis = false;						
 		actorData.system.settings.haspath = false;
-		actorData.system.settings.hasbloodpool = false;
+		actorData.system.settings.hasbloodpool = true;
 		actorData.system.settings.hasvirtue = false;
 		actorData.system.settings.hasglamour = false;
 		actorData.system.settings.hasbanality = false;
