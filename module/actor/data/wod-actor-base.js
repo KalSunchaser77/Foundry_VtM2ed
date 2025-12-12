@@ -281,23 +281,25 @@ export class WoDActor extends Actor {
             if ((updateData.system.settings.hasrage) || (updateData.system.settings.hasgnosis)) {
                 updateData = await this._handleWerewolfCalculations(updateData);
             }
-		// Handle vampire-style calculations (paths, blood pool, virtues, etc.)
-			const isVampire =
-			  updateData.type === CONFIG.worldofdarkness.sheettype.vampire;
+// Handle vampire-style calculations (paths, blood pool, virtues, etc.)
+const isVampire = updateData.type === CONFIG.worldofdarkness.sheettype.vampire;
+const isGhoul = updateData.type === CONFIG.worldofdarkness.sheettype.mortal && updateData.system?.settings?.variant === "ghoul";
 
-			const isGhoul =
- 			  updateData.type === CONFIG.worldofdarkness.sheettype.mortal &&
-			  updateData.system?.settings?.variant === "ghoul";
+if (isVampire || isGhoul) {
+  // Only Vampires and Ghoul Mortals get the vampire calculations
+  updateData = await this._handleVampireCalculations(updateData);
+} else {
+  // Everyone else: make sure blood-per-turn is 0 if the field exists
+  if (updateData?.system?.advantages?.bloodpool) {
 
-			if (isVampire || isGhoul) {
-		  // Only Vampires and Ghoul Mortals get the vampire calculations
-			  updateData = await this._handleVampireCalculations(updateData);
-		} else {
- 		 // Everyone else: make sure blood-per-turn is 0 if the field exists
-		  if (updateData?.system?.advantages?.bloodpool) {
-			    updateData.system.advantages.bloodpool.perturn = 0;
- 		 }
-		}
+    // Creatures get a small blood pool (max 5), but still 0 per turn
+    if (updateData.type === CONFIG.worldofdarkness.sheettype.creature) {
+      updateData.system.advantages.bloodpool.max = 5;
+    }
+
+    updateData.system.advantages.bloodpool.perturn = 0;
+  }
+}
             if (updateData.type == CONFIG.worldofdarkness.sheettype.mage) {
                 updateData = await this._handleMageCalculations(updateData);
             }
