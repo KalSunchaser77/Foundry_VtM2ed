@@ -640,7 +640,6 @@ static async SetVampireVariant(actorData, variant) {
 				actorData.system.settings.haspath = true;
 				actorData.system.settings.hasbloodpool = true;
 				actorData.system.settings.hasvirtue = true;
-				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.vampire;
 			}
 			if (variant == 'orpheus') {
 				actorData = await this.SetOrpheusAbilities(actorData, actor);
