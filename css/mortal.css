@@ -1,40 +1,115 @@
-.mortalDialog,
-.mortal,
-.mortalItem {
-  --main-full-color: var(--main-mortal-color);
-  --main-mid-color: var(--main-mortal-mid-color);
-  --main-dim-color: var(--main-mortal-dim-color);
-  --color-shadow-primary: var(--main-mortal-color);
+.vampireDialog,
+.vampire,
+.vampireItem {
+  --main-full-color: var(--main-vampire-color);
+  --main-mid-color: var(--main-vampire-mid-color);
+  --main-dim-color: var(--main-vampire-dim-color);
+  --color-shadow-primary: var(--main-vampire-color);
 }
 
-.mortal:not(.noSplatFont) .headlineTabs {
-    font-size: 24px;
+.vampire {
+  --sheet-background-color: var(--vampire-page-background);
 }
 
-.mortal:not(.noSplatFont) nav,
-.mortal:not(.noSplatFont) .splatFont,
-.mortalDialog:not(.noSplatFont) .splatFont,
-.mortalItem:not(.noSplatFont) .splatFont {
-	/* font-family: "mortal", var(--main-font); */
-    font-family: "exalted", var(--main-font);
+.vampire .modern {
+  --main-wod-banner: var(--vampire-banner-background);
+  --main-wod-banner-small: var(--vampire-banner-small-background);
 }
 
-.mortal .secondHeadlineTabs {
-    width: 20%;
+.vampire .victorian {
+  --main-wod-banner: var(--vampire-banner-background);
+  --main-wod-banner-small: var(--vampire-banner-small-background);
 }
 
-.mortal:not(.noSplatFont) .secondHeadlineTabs {
-    font-size: 18px;
+.vampire .darkages {
+  --main-wod-banner: var(--vampire-banner-background);
+  --main-wod-banner-small: var(--vampire-banner-small-background);
 }
 
-.mortalDialog:not(.noSplatFont) .headlineGroup {
+.vampire:not(.noSplatFont) .headlineTabs {
+    line-height: 25px;
+}
+  
+.vampire:not(.noSplatFont) .sheet-headline {
+    font-size: 30px;
+}
+
+.vampire:not(.noSplatFont) .sheet-banner {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.vampire:not(.noSplatFont) .headlineGroup {
+  font-weight: normal;
+}
+
+.vampire:not(.noSplatFont) .headlineText {
+  font-weight: normal;
+}
+
+.vampire:not(.noSplatFont) .headlineRow {
+  font-weight: normal;
+}
+
+.vampire:not(.noSplatFont) .headlineList {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.vampire:not(.noSplatFont) .combat-concealBox {
+  width: 60px;
+}
+
+.vampire:not(.noSplatFont) .sheet-banner-small {
+  margin-bottom: 0px;
+}
+  
+.vampireDialog:not(.noSplatFont) .headlineGroup {
+  font-size: 28px;
+}
+
+.vampire:not(.noSplatFont) nav,
+.vampire:not(.noSplatFont) .splatFont,
+.vampireDialog:not(.noSplatFont) .splatFont,
+.vampireItem:not(.noSplatFont) .splatFont {
+	font-family: "vampire", var(--main-font);
+}
+
+.vampire:not(.noSplatFont) .experienceValue {
+  font-size: 18px;
+}
+
+.ghoul:not(.noSplatFont) .experienceValue {
+  font-size: 26px;
+  margin-top: 15px;
+}
+
+/* SETTING */
+
+.vampire:not(.noSplatFont) .secondHeadlineTabs {
     font-size: 26px;
 }
-
-.mortalDialog:not(.noSplatFont) .headline {
-    font-size: 18px;
+  
+.vampire .secondHeadlineTabs {
+    width: 25%;
 }
 
-.mortal .headlineList:not(.noSplatFont) {
-    font-size: 16px;
+.ghoul:not(.noSplatFont) .secondHeadlineTabs {
+  font-size: 20px !important;
+}
+
+.ghoul .secondHeadlineTabs {
+  width: 20% !important;
+}
+
+/* START - Discipline */
+
+
+
+/* END - Discipline */
+
+/* DIALOG */
+
+.vampireDialog:not(.noSplatFont) .headline {
+  font-size: 20px;
 }
