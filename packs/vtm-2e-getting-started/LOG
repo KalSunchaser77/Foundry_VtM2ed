@@ -1,8 +1,0 @@
-2025/12/10-16:52:13.097 80d0 Recovering log #290
-2025/12/10-16:52:13.112 80d0 Delete type=0 #290
-2025/12/10-16:52:13.112 80d0 Delete type=3 #288
-2025/12/10-16:54:28.401 3eec Level-0 table #295: started
-2025/12/10-16:54:28.401 3eec Level-0 table #295: 0 bytes OK
-2025/12/10-16:54:28.408 3eec Delete type=0 #293
-2025/12/10-16:54:28.421 3eec Manual compaction at level-0 from '!journal!PM8AAOQAboHc9FWi' @ 72057594037927935 : 1 .. '!journal.pages!tFBnWzX8O9f3VHbi.ua0RNhPNPo5z5CeQ' @ 0 : 0; will stop at (end)
-2025/12/10-16:54:28.421 3eec Manual compaction at level-1 from '!journal!PM8AAOQAboHc9FWi' @ 72057594037927935 : 1 .. '!journal.pages!tFBnWzX8O9f3VHbi.ua0RNhPNPo5z5CeQ' @ 0 : 0; will stop at (end)
