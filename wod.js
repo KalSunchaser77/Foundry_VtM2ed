@@ -441,7 +441,7 @@ Hooks.on("createActor", async (actor, options, userId) => {
   if (!game.user.isGM) return;
 
   // Limit to the actor types you want defaults on
-  const allowedTypes = ["Vampire"];
+  const allowedTypes = ["Vampire","Mortal","Creature"];
   if (!allowedTypes.includes(actor.type)) return;
 
   // Get the compendium that holds Punch/Kick/Bite
