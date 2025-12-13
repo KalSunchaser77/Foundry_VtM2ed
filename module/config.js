@@ -220,14 +220,14 @@ wod.knowledges = {
 }
 
 wod.alwaysspeciality = [
-    "expression", 
+/*    "expression", 
     "craft", 
     "performance", 
     "academics", 
     "law", 
     "repair", 
     "science", 
-    "technology"
+    "technology"*/
 ]
 
 wod.attackAttributes = {
