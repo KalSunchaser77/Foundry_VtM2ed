@@ -227,6 +227,7 @@ wod.alwaysspeciality = [
     "law", 
     "science", 
     "technology"*/
+    "linguistics"
 ]
 
 wod.attackAttributes = {
