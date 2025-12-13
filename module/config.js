@@ -225,7 +225,6 @@ wod.alwaysspeciality = [
     "performance", 
     "academics", 
     "law", 
-    "repair", 
     "science", 
     "technology"*/
 ]
