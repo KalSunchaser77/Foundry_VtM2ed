@@ -181,7 +181,7 @@ export const systemSettings = function() {
 		hint: game.i18n.localize('wod.settings.explodingdicehint'),
 		scope: "world",
 		config: false,
-		default: speciality,
+		default: false,
 		type: String,
         choices: {
 			"never": game.i18n.localize('wod.settings.nonotuse'),
