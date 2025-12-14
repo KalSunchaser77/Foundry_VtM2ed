@@ -63,7 +63,7 @@ export const systemSettings = function() {
 		hint: game.i18n.localize('wod.settings.fifthedwillpowersettinghint'),
 		scope: "world",
 		config: false,
-		default: "5th",
+		default: "20th",
 		type: String,
         choices: {
 			"5th": "5th edition",
@@ -127,7 +127,7 @@ export const systemSettings = function() {
 		hint: game.i18n.localize('wod.settings.specialityaddsuccesshint'),
 		scope: "world",
 		config: false,
-		default: 2,
+		default: 0,
 		type: Number,
         choices: {
             "0": game.i18n.localize('wod.settings.nonotuse'),
@@ -166,7 +166,7 @@ export const systemSettings = function() {
 		hint: game.i18n.localize('wod.settings.tenaddsuccesshint'),
 		scope: "world",
 		config: false,
-		default: 0,
+		default: 1,
 		type: Number,
         choices: {
             "0": game.i18n.localize('wod.settings.nonotuse'),
@@ -181,7 +181,7 @@ export const systemSettings = function() {
 		hint: game.i18n.localize('wod.settings.explodingdicehint'),
 		scope: "world",
 		config: false,
-		default: false,
+		default: speciality,
 		type: String,
         choices: {
 			"never": game.i18n.localize('wod.settings.nonotuse'),
