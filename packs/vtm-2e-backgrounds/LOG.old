@@ -1,0 +1,8 @@
+2025/12/14-20:04:17.404 1ab0 Recovering log #657
+2025/12/14-20:04:17.408 1ab0 Delete type=0 #657
+2025/12/14-20:04:17.408 1ab0 Delete type=3 #655
+2025/12/14-20:06:41.175 2abc Level-0 table #662: started
+2025/12/14-20:06:41.175 2abc Level-0 table #662: 0 bytes OK
+2025/12/14-20:06:41.181 2abc Delete type=0 #660
+2025/12/14-20:06:41.201 2abc Manual compaction at level-0 from '!items!1bEh7LFvCxcjPGyX' @ 72057594037927935 : 1 .. '!items!qUxKm5FAOLLyKwOC' @ 0 : 0; will stop at (end)
+2025/12/14-20:06:41.201 2abc Manual compaction at level-1 from '!items!1bEh7LFvCxcjPGyX' @ 72057594037927935 : 1 .. '!items!qUxKm5FAOLLyKwOC' @ 0 : 0; will stop at (end)
