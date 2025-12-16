@@ -611,12 +611,29 @@ Handlebars.registerHelper("getGetStatArea", function (actor, stat, statname, isr
 					mark = actor.system.listdata.health[value].status;
 				}
 			}
+/*				
 			else {
 				// Default temporary behavior
 				if (stat.temporary > value) {
 					mark = "x";
 				}
+*/
+			
+else {
+  if (stat.temporary > value) {
 
+    // --- Ghoul Blood Pool split: Vitae vs natural blood ---
+    if (statname === "bloodpool" && actor?.system?.settings?.variant === "ghoul") {
+      const vitae = parseInt(stat?.vitae ?? 0);
+
+      // First N filled boxes are Vitae
+      if (value < vitae) mark = "♦";
+      else mark = "x";
+    }
+    else {
+      mark = "x";
+				}
+			
 				// ✅ Ghoul Blood Pool: differentiate Vitae vs Natural blood
 				// Vitae = first N filled squares, where N = bloodpool.vitae
 				if (
