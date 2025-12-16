@@ -407,6 +407,7 @@ export const registerHandlebarsHelpers = function () {
 	});	
 
 	/* get advantages box mainly used on Core (application v1) */
+	/* Commented out for GHOUL VITAE MOD 
 	Handlebars.registerHelper("getGetStatArea", function (actor, stat, statname, isrollable, ispermanent, istemporary, showbanner = true) {
 		let html = "";
 		let permanent_html = "";
@@ -515,7 +516,138 @@ export const registerHandlebarsHelpers = function () {
 
 		return html;
 	});
+END COMMENT OUT GHOUL VITAE MOD */
+/* get advantages box mainly used on Core (application v1) */
+Handlebars.registerHelper("getGetStatArea", function (actor, stat, statname, isrollable, ispermanent, istemporary, showbanner = true) {
+	let html = "";
+	let permanent_html = "";
+	let temporary_html = "";
+	let stat_headline_text = game.i18n.localize(`wod.advantages.${statname}`);
+	let rollable = "";
+	let splat = CONFIG.worldofdarkness.sheettype.mortal;
+	let splat_temporary = CONFIG.worldofdarkness.sheettype.mortal;
+	let path = "advantages";
 
+	if (isrollable) {
+		rollable = " vrollable";
+	}
+
+	// vampire path
+	if (statname == "path") {
+		if (stat.label == "custom") {
+			stat_headline_text = stat.custom;
+		}
+		else {
+			stat_headline_text = game.i18n.localize(stat.label);
+		}
+	}
+
+	// wraith corpus
+	if (statname == "corpus") {
+		splat_temporary = CONFIG.worldofdarkness.sheettype.wraith;
+	}
+
+	// werewolf and shifter renown
+	if ((statname == "glory") || (statname == "honor") || (statname == "wisdom")) {
+		path = "renown";
+
+		splat = CONFIG.worldofdarkness.sheettype.werewolf;
+		if (actor.type == CONFIG.worldofdarkness.sheettype.werewolf) {
+			stat_headline_text = game.i18n.localize(actor.GetShifterRenownName(actor.system.tribe, statname));
+		}
+		else {
+			stat_headline_text = game.i18n.localize(actor.GetShifterRenownName(actor.system.changingbreed, statname));
+		}
+	}
+
+	if (showbanner) {
+		html += `<div class="sheet-headline sheet-banner-small splatFont ${rollable}" data-type="${splat}" data-key="${statname}" data-noability="true"><span class="sheet-banner-text">${stat_headline_text}</span></div>`;
+	}
+	else {
+		html += `<div class="sheet-headline splatFont ${rollable}" data-type="${splat}" data-key="${statname}" data-noability="true"><span class="sheet-banner-text">${stat_headline_text}</span></div>`;
+	}
+
+	if (ispermanent) {
+		let header = `<div class="sheet-boxcontainer ${statname}"><div class="resource-value permValueRow" data-value="${stat.permanent}" data-name="${path}.${statname}.permanent">`;
+		let footer = `</div></div>`;
+
+		for (let value = 0; value <= stat.max - 1; value++) {
+			if ((actor.type == CONFIG.worldofdarkness.sheettype.changeling) && (statname == "willpower")) {
+				let imbalance = "";
+				let imbalance_title_text = "";
+
+				let imbalanceValue = stat.permanent - stat.imbalance;
+
+				if ((value >= imbalanceValue) && (value < stat.permanent)) {
+					imbalance = `imbalance`;
+					imbalance_title_text = game.i18n.localize(`wod.advantages.imbalance`);
+				}
+
+				permanent_html += `<span class="resource-value-step ${imbalance}" title="${imbalance_title_text}" data-type="${splat}" data-key="${statname}" data-index="${value}"></span>`;
+			}
+			else {
+				permanent_html += `<span class="resource-value-step" data-type="${splat}" data-key="${statname}" data-index="${value}"></span>`;
+			}
+		}
+
+		permanent_html = header + permanent_html + footer;
+	}
+
+	if (istemporary) {
+		let header = `<div class="sheet-boxcontainer"><div class="resource-counter tempSquareRow" data-value="${stat.temporary}" data-name="${path}.${statname}.temporary">`;
+		let footer = `</div></div>`;
+
+		for (let value = 0; value <= stat.max - 1; value++) {
+			let mark = "";
+			let extraClass = "";
+
+			// Wraith corpus special handling
+			if ((splat_temporary === CONFIG.worldofdarkness.sheettype.wraith) && (stat.label === "wod.advantages.corpus")) {
+				if (stat.temporary > value) {
+					mark = "/";
+				}
+
+				if (actor.system?.listdata?.health[value] !== undefined) {
+					mark = actor.system.listdata.health[value].status;
+				}
+			}
+			else {
+				// Default temporary behavior
+				if (stat.temporary > value) {
+					mark = "x";
+				}
+
+				// ✅ Ghoul Blood Pool: differentiate Vitae vs Natural blood
+				// Vitae = first N filled squares, where N = bloodpool.vitae
+				if (
+					statname === "bloodpool" &&
+					actor?.system?.settings?.variant === "ghoul" &&
+					Number.isFinite(parseInt(stat?.vitae))
+				) {
+					const temp = parseInt(stat?.temporary ?? 0);
+					const vitae = Math.max(0, Math.min(parseInt(stat.vitae), temp));
+
+					// Only apply styling to filled squares
+					if (mark) {
+						if (value < vitae) extraClass = " bloodpool-vitae";
+						else extraClass = " bloodpool-natural";
+					}
+				}
+			}
+
+			temporary_html += `<span class="resource-value-step${extraClass}" data-type="${splat_temporary}" data-key="${statname}" data-index="${value}" data-state="${mark}"></span>`;
+		}
+
+		temporary_html = header + temporary_html + footer;
+	}
+
+	html += permanent_html + temporary_html;
+
+	return html;
+});
+/*END GHOUL VITAE MOD INSERT */
+
+	
 	Handlebars.registerHelper("getMainPowerList", function (actor, powertype) {
 		const items = (actor?.items || []).filter(item => item.type === "Power" && item.system.type === powertype);
 		items.sort((a, b) => a.name.localeCompare(b.name));
