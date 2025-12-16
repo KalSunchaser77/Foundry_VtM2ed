@@ -1,0 +1,8 @@
+2025/12/15-19:20:06.624 4b48 Recovering log #702
+2025/12/15-19:20:06.640 4b48 Delete type=0 #702
+2025/12/15-19:20:06.641 4b48 Delete type=3 #700
+2025/12/15-19:20:19.813 7758 Level-0 table #707: started
+2025/12/15-19:20:19.814 7758 Level-0 table #707: 0 bytes OK
+2025/12/15-19:20:19.819 7758 Delete type=0 #705
+2025/12/15-19:20:19.833 7758 Manual compaction at level-0 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)
+2025/12/15-19:20:19.833 7758 Manual compaction at level-1 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)
