@@ -676,11 +676,12 @@ static async SetVampireVariant(actorData, variant) {
     			actorData.system.settings.powers.hasdisciplines = true;
     			actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.vampire;
 
-    // 🔽 ADD THESE LINES
+    // 🔽 ADD THESE LINES for Ghoul Blood Project
    				 actorData.system.advantages = actorData.system.advantages ?? {};
     			 actorData.system.advantages.bloodpool = actorData.system.advantages.bloodpool ?? {};
     			 actorData.system.advantages.bloodpool.vitae =
          		 actorData.system.advantages.bloodpool.vitae ?? 0;
+	// End of add lines for Ghoul Blood Project			
 			}
 			if (variant == 'kinfolk') {
 				actorData.system.settings.hasgnosis = true;
