@@ -670,11 +670,17 @@ static async SetVampireVariant(actorData, variant) {
 				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.changeling;
 			}
 			if (variant == 'ghoul') {
-				actorData.system.settings.haspath = true;
-				actorData.system.settings.hasbloodpool = true;
-				actorData.system.settings.hasvirtue = true;
-				actorData.system.settings.powers.hasdisciplines = true;
-				actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.vampire;
+			    actorData.system.settings.haspath = true;
+		    	actorData.system.settings.hasbloodpool = true;
+    			actorData.system.settings.hasvirtue = true;
+    			actorData.system.settings.powers.hasdisciplines = true;
+    			actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.vampire;
+
+    // 🔽 ADD THESE LINES
+   				 actorData.system.advantages = actorData.system.advantages ?? {};
+    			 actorData.system.advantages.bloodpool = actorData.system.advantages.bloodpool ?? {};
+    			 actorData.system.advantages.bloodpool.vitae =
+         		 actorData.system.advantages.bloodpool.vitae ?? 0;
 			}
 			if (variant == 'kinfolk') {
 				actorData.system.settings.hasgnosis = true;
