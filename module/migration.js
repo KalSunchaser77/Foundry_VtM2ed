@@ -195,6 +195,7 @@ export  const updates = async () => {
             if (actorData.type == CONFIG.worldofdarkness.sheettype.vampire) {
                 actorData.system.settings.haspath = true;
                 actorData.system.settings.hasbloodpool = true;
+				actorData.system.settings.hasvitae = true; // NEW GHOUL VITAE
                 actorData.system.settings.hasvirtue = true;
                 actorData.system.settings.powers.hasdisciplines = true;
             }
@@ -387,6 +388,7 @@ export  const updates = async () => {
             updateData.system.settings.haswillpower = true;
             updateData.system.settings.hasessence = false;
             updateData.system.settings.hasbloodpool = false;                    
+			actorData.system.settings.hasvitae = false; // NEW GHOUL VITAE
         }   
         if (updateData.type == CONFIG.worldofdarkness.sheettype.werewolf) {
             update = true;  
@@ -605,6 +607,10 @@ export  const updates = async () => {
                 updateData.system.advantages.bloodpool = updateData.system.bloodpool;
             }
 
+			if (updateData.system.vitae != undefined) {
+                updateData.system.advantages.vitae = updateData.system.vitae;
+            }
+
             updateData.system.settings.haswillpower = true;
 
             update = true;
@@ -646,6 +652,7 @@ export  const updates = async () => {
 
             updateData.system.settings.haspath = true;
             updateData.system.settings.hasbloodpool = true;
+			actorData.system.settings.hasvitae = true; // NEW GHOUL VITAE
             updateData.system.settings.hasvirtue = true;
             updateData.system.settings.powers.hasdisciplines = true;
 
@@ -734,7 +741,10 @@ export  const updates = async () => {
             if (updateData.system.bloodpool != undefined) {
                 updateData.system.advantages.bloodpool = updateData.system.bloodpool;
             }
-            if (updateData.system.essence != undefined) {
+            if (updateData.system.vitae != undefined) {
+                updateData.system.advantages.vitae = updateData.system.vitae;
+            }
+             if (updateData.system.essence != undefined) {
                 updateData.system.advantages.essence = updateData.system.essence;
             }
 
