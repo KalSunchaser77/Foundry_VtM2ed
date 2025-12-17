@@ -2324,30 +2324,3 @@ input.sheet-infoWidth {
       transparent 100%
     ), var(--healthlevel-incapacitated-color);
 }
-
-/* ================================
-   Ghoul Blood Pool Visualization
-   ================================ */
-
-/* Vitae (Master's Blood) */
-.resource-value-step.bloodpool-vitae {
-	background-color: #8b0000;          /* dark crimson */
-	border: 2px solid #5a0000;
-	box-shadow: inset 0 0 2px rgba(0,0,0,0.6);
-}
-
-/* Natural Ghoul Blood */
-.resource-value-step.bloodpool-natural {
-	background-color: #b22222;          /* lighter red */
-	border: 1px solid #3a0000;
-	opacity: 0.75;
-}
-
-/* Optional: subtle shape distinction */
-.resource-value-step.bloodpool-vitae {
-	border-radius: 2px;                 /* sharper, more "forged" */
-}
-
-.resource-value-step.bloodpool-natural {
-	border-radius: 6px;                 /* softer, organic */
-}
