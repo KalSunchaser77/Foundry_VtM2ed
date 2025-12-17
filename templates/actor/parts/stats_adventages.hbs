@@ -62,7 +62,13 @@
 			</div>
 		{{/if}}
 
-		{{#if actor.system.settings.hasbanality}}
+{{#if data.system.settings.hasvitae}}
+  <div style="width: 33%;">
+    {{{getGetStatArea actor actor.system.advantages.vitae "vitae" false false true}}}
+  </div>
+{{/if}}
+
+	{{#if actor.system.settings.hasbanality}}
 			<div style="width: 33%;">
 				{{{getGetStatArea actor actor.system.advantages.banality "banality" true true true}}}
 			</div>
