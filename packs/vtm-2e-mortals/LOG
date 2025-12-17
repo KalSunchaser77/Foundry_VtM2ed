@@ -1,8 +1,0 @@
-2025/12/17-10:35:52.717 65f4 Recovering log #169
-2025/12/17-10:35:52.720 65f4 Delete type=0 #169
-2025/12/17-10:35:52.721 65f4 Delete type=3 #168
-2025/12/17-10:54:53.506 5f10 Level-0 table #173: started
-2025/12/17-10:54:53.506 5f10 Level-0 table #173: 0 bytes OK
-2025/12/17-10:54:53.512 5f10 Delete type=0 #171
-2025/12/17-10:54:53.542 5f10 Manual compaction at level-0 from '!actors!0KFGNWUwJnzqWsGx' @ 72057594037927935 : 1 .. '!folders!TEvCR0B8pAcMzpLt' @ 0 : 0; will stop at (end)
-2025/12/17-10:54:53.543 5f10 Manual compaction at level-1 from '!actors!0KFGNWUwJnzqWsGx' @ 72057594037927935 : 1 .. '!folders!TEvCR0B8pAcMzpLt' @ 0 : 0; will stop at (end)
