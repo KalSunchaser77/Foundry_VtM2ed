@@ -178,6 +178,17 @@
                 </div>
 
                 <div class="clearareaBox row">
+                    <label for="data.system.settings.hasvitae" class="pullLeft headlineNormal" style="width: 150px;">{{#if (eq actor.system.settings.variant "earthbound")}}{{localize "wod.advantages.faithpool"}}{{else}}{{localize "wod.advantages.vitae"}}{{/if}}</label>
+                    <div class="switch headlineNormal bold pointer splatFont" data-source="advantages" data-switchtype="hasvitae" data-type="{{config.sheettype.mortal}}">
+                        {{#if data.system.settings.hasvitae}}
+                            <i class="icon fa-solid fa-eye"></i>
+                        {{else}}
+                            <i class="icon fa-solid fa-eye-slash"></i>
+                        {{/if}}
+                    </div>
+                </div>
+
+                <div class="clearareaBox row">
                     <label for="data.system.settings.hasvirtue" class="pullLeft headlineNormal" style="width: 150px;">{{localize 'wod.advantages.virtue.headline'}}</label>
                     <div class="switch headlineNormal bold pointer splatFont" data-source="advantages" data-switchtype="hasvirtue" data-type="{{config.sheettype.mortal}}">
                         {{#if data.system.settings.hasvirtue}}
@@ -325,6 +336,40 @@
                             type="text" 
                             value="{{data.system.advantages.bloodpool.perturn}}" 
                             data-name="data.system.advantages.bloodpool.perturn" 
+                            data-dtype="Number" {{#if locked}} readonly {{/if}} />
+                    </div>
+                </div>
+            </div>
+            
+        {{/if}}  
+        
+        {{#if data.system.settings.hasvitae}}
+
+            <div class="sheet-area flex-columns" style="margin-top: 10px;">
+                <div class="clearareaBox">
+                    <div class="headlineGroup splatFont">{{#if (eq actor.system.settings.variant "earthbound")}}{{localize "wod.advantages.faithpool"}}{{else}}{{localize "wod.advantages.vitae"}}{{/if}}</div>
+
+                    <div class="clearareaBox">
+                        <label for="data.system.advantages.vitae.max" class="pullLeft headlineNormal" style="width: 150px;" 
+                                data-label="{{data.system.advantages.vitae.max}}" 
+                                    data-ability="true">{{localize "wod.labels.maxvalue"}}</label>
+                            <input class="pullLeft sheet-infoValues numberBox {{#if (eq locked false)}}editable{{/if}}" 
+                                name="system.advantages.vitae.max" 
+                                type="text" 
+                                value="{{data.system.advantages.vitae.max}}" 
+                                data-name="data.system.advantages.vitae.max" 
+                                data-dtype="Number" {{#if locked}} readonly {{/if}} />
+                    </div>
+
+                    <div class="clearareaBox">
+                        <label for="data.system.advantages.vitae.perturn" class="pullLeft headlineNormal" style="width: 150px;" 
+                            data-label="{{data.system.advantages.vitae.perturn}}" 
+                                data-ability="true">{{localize "wod.advantages.perturn"}}</label>
+                        <input class="pullLeft sheet-infoValues numberBox {{#if (eq locked false)}}editable{{/if}}" 
+                            name="system.advantages.vitae.perturn" 
+                            type="text" 
+                            value="{{data.system.advantages.vitae.perturn}}" 
+                            data-name="data.system.advantages.vitae.perturn" 
                             data-dtype="Number" {{#if locked}} readonly {{/if}} />
                     </div>
                 </div>
