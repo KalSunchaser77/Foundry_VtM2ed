@@ -62,6 +62,14 @@
 			</div>
 		{{/if}}
 
+		{{#if data.system.settings.hasvitae}}
+			<div style="width: 33%;">
+				{{{getGetStatArea actor actor.system.advantages.vitae "vitae" false false true}}}
+
+				<div class="information-area centerText">{{localize "wod.advantages.perturn"}}: {{data.system.advantages.vitae.perturn}}</div>
+			</div>
+		{{/if}}
+
 		{{#if data.system.settings.hasbanality}}
 			<div style="width: 33%;">
 				{{{getGetStatArea actor actor.system.advantages.banality "banality" true true true}}}
