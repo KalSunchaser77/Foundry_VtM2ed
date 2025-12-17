@@ -672,9 +672,18 @@ static async SetVampireVariant(actorData, variant) {
 			if (variant == 'ghoul') {
 			    actorData.system.settings.haspath = true;
 		    	actorData.system.settings.hasbloodpool = true;
+				actorData.system.settings.hasvitae = true; // NEW GHOUL VITAE
     			actorData.system.settings.hasvirtue = true;
     			actorData.system.settings.powers.hasdisciplines = true;
     			actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.vampire;
+
+				// NEW GHOUL VITAE
+				actorData.system.advantages.vitae ??= {
+    			label: "wod.advantages.vitae",
+    			permanent: 0,
+    			temporary: 0,
+    			max: 5
+  			   };
 			}
 			if (variant == 'kinfolk') {
 				actorData.system.settings.hasgnosis = true;
