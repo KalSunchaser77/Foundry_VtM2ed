@@ -593,70 +593,42 @@ Handlebars.registerHelper("getGetStatArea", function (actor, stat, statname, isr
 		permanent_html = header + permanent_html + footer;
 	}
 
-	if (istemporary) {
-		let header = `<div class="sheet-boxcontainer"><div class="resource-counter tempSquareRow" data-value="${stat.temporary}" data-name="${path}.${statname}.temporary">`;
-		let footer = `</div></div>`;
+if (istemporary) {
+  let header = `<div class="sheet-boxcontainer"><div class="resource-counter tempSquareRow" data-value="${stat.temporary}" data-name="${path}.${statname}.temporary">`;
+  let footer = `</div></div>`;
 
-		for (let value = 0; value <= stat.max - 1; value++) {
-			let mark = "";
-			let extraClass = "";
+  for (let value = 0; value <= stat.max - 1; value++) {
+    let mark = "";
 
-			// Wraith corpus special handling
-			if ((splat_temporary === CONFIG.worldofdarkness.sheettype.wraith) && (stat.label === "wod.advantages.corpus")) {
-				if (stat.temporary > value) {
-					mark = "/";
-				}
+    // --- Wraith corpus special handling (keep existing behavior) ---
+    if ((splat_temporary === CONFIG.worldofdarkness.sheettype.wraith) && (stat.label === "wod.advantages.corpus")) {
+      if (stat.temporary > value) {
+        mark = "/";
+      }
 
-				if (actor.system?.listdata?.health[value] !== undefined) {
-					mark = actor.system.listdata.health[value].status;
-				}
-			}
-/*				
-			else {
-				// Default temporary behavior
-				if (stat.temporary > value) {
-					mark = "x";
-				}
-*/
-			
-else {
-  if (stat.temporary > value) {
-
-    // --- Ghoul Blood Pool split: Vitae vs natural blood ---
-    if (statname === "bloodpool" && actor?.system?.settings?.variant === "ghoul") {
-      const vitae = parseInt(stat?.vitae ?? 0);
-
-      // First N filled boxes are Vitae
-      if (value < vitae) mark = "♦";
-      else mark = "x";
+      if (actor.system?.listdata?.health[value] !== undefined) {
+        mark = actor.system.listdata.health[value].status;
+      }
     }
     else {
-      mark = "x";
-				}
-			
-				// ✅ Ghoul Blood Pool: differentiate Vitae vs Natural blood
-				// Vitae = first N filled squares, where N = bloodpool.vitae
-				if (
-					statname === "bloodpool" &&
-					actor?.system?.settings?.variant === "ghoul" &&
-					Number.isFinite(parseInt(stat?.vitae))
-				) {
-					const temp = parseInt(stat?.temporary ?? 0);
-					const vitae = Math.max(0, Math.min(parseInt(stat.vitae), temp));
+      // Default temporary behavior
+      if (stat.temporary > value) {
+        mark = "x";
 
-					// Only apply styling to filled squares
-					if (mark) {
-						if (value < vitae) extraClass = " bloodpool-vitae";
-						else extraClass = " bloodpool-natural";
-					}
-				}
-			}
+        // ✅ Ghoul bloodpool: first N filled squares are Vitae
+        if (statname === "bloodpool" && actor?.system?.settings?.variant === "ghoul") {
+          const vitae = Math.max(0, parseInt(stat?.vitae ?? 0) || 0);
+          if (value < vitae) mark = "♦";
+        }
+      }
+    }
 
-			temporary_html += `<span class="resource-value-step${extraClass}" data-type="${splat_temporary}" data-key="${statname}" data-index="${value}" data-state="${mark}"></span>`;
-		}
+    temporary_html += `<span class="resource-value-step" data-type="${splat_temporary}" data-key="${statname}" data-index="${value}" data-state="${mark}"></span>`;
+  }
 
-		temporary_html = header + temporary_html + footer;
-	}
+  temporary_html = header + temporary_html + footer;
+}
+
 
 	html += permanent_html + temporary_html;
 
