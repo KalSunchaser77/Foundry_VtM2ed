@@ -426,8 +426,9 @@ Hooks.on('createItem', async (item, options, userId) => {
 //
 // 🔽 ADD THIS BLOCK DIRECTLY UNDER createItem, BEFORE renderActorSheet 🔽
 //
+
 Hooks.on("createActor", async (actor, options, userId) => {
-  // 🔹 Always make Vampires default to "standard/general" variant
+  // Keep your vampire default variant behavior (optional)
   if (actor.type === "Vampire") {
     await actor.update({
       "system.settings.variant": "general",
@@ -437,80 +438,39 @@ Hooks.on("createActor", async (actor, options, userId) => {
     });
   }
 
-  // 🔹 Only the GM should auto-add items so we don't get duplicates
+  // Only GM should auto-add defaults
   if (!game.user.isGM) return;
 
-  // Limit to the actor types you want defaults on
-  const allowedTypes = ["Vampire","Creature"];
-  if (!allowedTypes.includes(actor.type)) return;
+  // Decide which defaults each actor type should receive
+  const defaultsByType = {
+    Vampire: ["Bite", "Punch", "Grapple", "Kick", "Body slam"],
+    Creature: ["Bite", "Punch", "Grapple", "Kick", "Body slam"],
+    Mortal: ["Punch", "Grapple", "Kick", "Body slam"]
+  };
 
-  // Get the compendium that holds Punch/Kick/Bite
+  const defaultNames = defaultsByType[actor.type];
+  if (!defaultNames) return; // not a type we care about
+
   const pack = game.packs.get("vtm20-2e-saa.vtm-2e-weapons-and-items");
   if (!pack) {
     console.warn("VtM 2E – Default Attacks compendium not found.");
     return;
   }
 
-  // Names of the default attacks to add
-  const defaultNames = ["Bite", "Punch", "Grapple", "Kick", "Body slam"];
+  // ✅ Key fix: only add attacks the actor does NOT already have
+  const existingNames = new Set(actor.items.map(i => i.name));
+  const missingNames = defaultNames.filter(n => !existingNames.has(n));
+  if (!missingNames.length) return;
 
-  // Load all documents from the pack
   const docs = await pack.getDocuments();
-
-  // Filter for our attack items and convert them to plain data
   const itemsToAdd = docs
-    .filter(i => defaultNames.includes(i.name))
+    .filter(i => missingNames.includes(i.name))
     .map(i => i.toObject());
 
   if (!itemsToAdd.length) return;
 
-  // Create them as embedded Items on the new actor
   await actor.createEmbeddedDocuments("Item", itemsToAdd);
 });
-  // ... (rest of renderActorSheet as you already have it)
-
-Hooks.on("createActor", async (actor, options, userId) => {
-  // 🔹 Always make Vampires default to "standard/general" variant
-  if (actor.type === "Vampire") {
-    await actor.update({
-      "system.settings.variant": "general",
-      "system.settings.hasbloodpool": true,
-      "system.settings.hasvirtue": true,
-      "system.settings.haspath": true
-    });
-  }
-
-  // 🔹 Only the GM should auto-add items so we don't get duplicates
-  if (!game.user.isGM) return;
-
-  // Limit to the actor types you want defaults on
-  const allowedTypes = ["Mortal"];
-  if (!allowedTypes.includes(actor.type)) return;
-
-  // Get the compendium that holds Punch/Kick/Bite
-  const pack = game.packs.get("vtm20-2e-saa.vtm-2e-weapons-and-items");
-  if (!pack) {
-    console.warn("VtM 2E – Default Attacks compendium not found.");
-    return;
-  }
-
-  // Names of the default attacks to add
-  const defaultNames = ["Punch", "Grapple", "Kick", "Body slam"];
-
-  // Load all documents from the pack
-  const docs = await pack.getDocuments();
-
-  // Filter for our attack items and convert them to plain data
-  const itemsToAdd = docs
-    .filter(i => defaultNames.includes(i.name))
-    .map(i => i.toObject());
-
-  if (!itemsToAdd.length) return;
-
-  // Create them as embedded Items on the new actor
-  await actor.createEmbeddedDocuments("Item", itemsToAdd);
-});
-  // ... (rest of renderActorSheet as you already have it)
 
 Hooks.on("renderActorSheet", (sheet) => { 
 	const useSplatFonts = game.settings.get('worldofdarkness', 'useSplatFonts');
