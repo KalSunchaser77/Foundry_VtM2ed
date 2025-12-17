@@ -443,9 +443,9 @@ Hooks.on("createActor", async (actor, options, userId) => {
 
   // Decide which defaults each actor type should receive
   const defaultsByType = {
-    Vampire: ["Bite", "Punch", "Grapple", "Kick", "Body slam"],
+    Vampire: ["Vampire Bite", "Punch", "Grapple", "Kick", "Body slam"],
     Creature: ["Bite", "Punch", "Grapple", "Kick", "Body slam"],
-    Mortal: ["Punch", "Grapple", "Kick", "Body slam"]
+    Mortal: ["Bite", "Punch", "Grapple", "Kick", "Body slam"]
   };
 
   const defaultNames = defaultsByType[actor.type];
