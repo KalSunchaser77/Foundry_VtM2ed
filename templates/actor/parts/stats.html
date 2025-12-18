@@ -58,7 +58,11 @@
 			<div style="width: 33%;">
 				{{{getGetStatArea actor actor.system.advantages.bloodpool "bloodpool" false false true}}}
 
-				<div class="information-area centerText">{{localize "wod.advantages.perturn"}}: {{data.system.advantages.bloodpool.perturn}}</div>
+				<div class="information-area centerText">
+					{{#if (eq actor.type config.sheettype.vampire)}}
+						{{localize "wod.advantages.perturn"}}: {{data.system.advantages.bloodpool.perturn}}
+					{{/if}}
+				</div>
 			</div>
 		{{/if}}
 
