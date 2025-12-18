@@ -679,7 +679,22 @@ static async SetVampireVariant(actorData, variant) {
 
 				// NEW GHOUL VITAE
 				actorData.system.advantages.vitae ??= {
-    			label: "wod.advantages.vitae",
+
+// Ensure Vitae exists with sane defaults
+actorData.system.advantages = actorData.system.advantages ?? {};
+actorData.system.advantages.vitae = actorData.system.advantages.vitae ?? {};
+
+// Max Vitae = 5
+actorData.system.advantages.vitae.max = actorData.system.advantages.vitae.max ?? 5;
+
+// Vitae "per turn" default (pick the number you want; 1 is typical)
+actorData.system.advantages.vitae.perturn = actorData.system.advantages.vitae.perturn ?? 1;
+
+// Also ensure track fields exist (prevents weirdness in some render paths)
+actorData.system.advantages.vitae.temporary = actorData.system.advantages.vitae.temporary ?? 0;
+actorData.system.advantages.vitae.permanent = actorData.system.advantages.vitae.permanent ?? 0;
+						
+				label: "wod.advantages.vitae",
     			permanent: 0,
     			temporary: 0,
     			max: 5
