@@ -952,6 +952,7 @@
 			"bloodpool": "Blood Pool",	
 			"vitae": "Vitae", 
 			"perturn": "Blood per turn",			
+			"vitaeperturn": "Vitae per turn",			
 			"faithpool": "Faith Pool",
 			"bearing": "Bearing",
 			"renown": "Renown",
