@@ -677,13 +677,22 @@ static async SetVampireVariant(actorData, variant) {
     			actorData.system.settings.powers.hasdisciplines = true;
     			actorData.system.settings.variantsheet = CONFIG.worldofdarkness.sheettype.vampire;
 
-				// NEW GHOUL VITAE
-				actorData.system.advantages.vitae ??= {
-				label: "wod.advantages.vitae",
-    			permanent: 0,
-    			temporary: 0,
-    			max: 5
-  			   };
+// NEW GHOUL VITAE
+actorData.system.advantages ??= {};
+actorData.system.advantages.vitae ??= {
+  label: "wod.advantages.vitae",
+  permanent: 0,
+  temporary: 0,
+  max: 5,
+  perturn: 1
+};
+
+// If an older ghoul already has vitae without these fields:
+actorData.system.advantages.vitae.label ??= "wod.advantages.vitae";
+actorData.system.advantages.vitae.max ??= 5;
+actorData.system.advantages.vitae.perturn ??= 1;
+actorData.system.advantages.vitae.temporary ??= 0;
+actorData.system.advantages.vitae.permanent ??= 0;
 			}
 			if (variant == 'kinfolk') {
 				actorData.system.settings.hasgnosis = true;
