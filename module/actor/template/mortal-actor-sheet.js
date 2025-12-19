@@ -1393,6 +1393,28 @@ export default class MortalActorSheet extends foundry.appv1.sheets.ActorSheet {
 				}
 			}				
 		}
+
+// --- Ghoul rule: Vitae reduces available Blood Pool ---
+try {
+  const isGhoul =
+    (this.actor.type === CONFIG.worldofdarkness.sheettype.mortal) &&
+    (actorData.system?.settings?.variant === "ghoul") &&
+    (actorData.system?.settings?.hasvitae);
+
+  if (isGhoul) {
+    const vitaeCur = parseInt(actorData.system.advantages?.vitae?.temporary ?? 0) || 0;
+
+    const bloodMax = parseInt(actorData.system.advantages?.bloodpool?.max ?? 0) || 0;
+    const allowedBlood = Math.max(0, bloodMax - vitaeCur);
+
+    const bloodCur = parseInt(actorData.system.advantages?.bloodpool?.temporary ?? 0) || 0;
+    if (bloodCur > allowedBlood) {
+      actorData.system.advantages.bloodpool.temporary = allowedBlood;
+    }
+  }
+} catch (e) {
+  console.warn("WoD | Ghoul Vitae/Bloodpool clamp failed", e);
+}
 		
 		actorData.system.settings.isupdated = false;
 		await this.actor.update(actorData);
