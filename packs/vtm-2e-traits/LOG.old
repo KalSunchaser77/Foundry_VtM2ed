@@ -1,0 +1,24 @@
+2025/12/23-14:18:52.399 4d6c Recovering log #860
+2025/12/23-14:18:52.399 4d6c Level-0 table #862: started
+2025/12/23-14:18:52.402 4d6c Level-0 table #862: 4542 bytes OK
+2025/12/23-14:18:52.405 4d6c Delete type=0 #860
+2025/12/23-14:18:52.405 4d6c Delete type=3 #859
+2025/12/23-16:48:09.841 c24 Level-0 table #865: started
+2025/12/23-16:48:09.857 c24 Level-0 table #865: 1175 bytes OK
+2025/12/23-16:48:09.863 c24 Delete type=0 #863
+2025/12/23-16:48:09.869 c24 Manual compaction at level-0 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at '!journal.pages!TcpdfXHN3OPvB5rz.nEBRBjGpy5JKoI2x' @ 1099 : 1
+2025/12/23-16:48:09.869 c24 Compacting 2@0 + 0@1 files
+2025/12/23-16:48:09.882 c24 Generated table #866@0: 10 keys, 2315 bytes
+2025/12/23-16:48:09.882 c24 Compacted 2@0 + 0@1 files => 2315 bytes
+2025/12/23-16:48:09.891 c24 compacted to: files[ 0 1 1 0 0 0 0 ]
+2025/12/23-16:48:09.891 c24 Delete type=2 #862
+2025/12/23-16:48:09.891 c24 Delete type=2 #865
+2025/12/23-16:48:09.891 c24 Manual compaction at level-0 from '!journal.pages!TcpdfXHN3OPvB5rz.nEBRBjGpy5JKoI2x' @ 1099 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)
+2025/12/23-16:48:09.891 c24 Manual compaction at level-1 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at '!journal.pages!TcpdfXHN3OPvB5rz.nEBRBjGpy5JKoI2x' @ 1103 : 1
+2025/12/23-16:48:09.891 c24 Compacting 1@1 + 1@2 files
+2025/12/23-16:48:09.903 c24 Generated table #867@1: 63 keys, 125784 bytes
+2025/12/23-16:48:09.903 c24 Compacted 1@1 + 1@2 files => 125784 bytes
+2025/12/23-16:48:09.907 c24 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/12/23-16:48:09.907 c24 Delete type=2 #834
+2025/12/23-16:48:09.907 c24 Delete type=2 #866
+2025/12/23-16:48:09.926 c24 Manual compaction at level-1 from '!journal.pages!TcpdfXHN3OPvB5rz.nEBRBjGpy5JKoI2x' @ 1103 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)
