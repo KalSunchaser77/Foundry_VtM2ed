@@ -1,8 +1,0 @@
-2025/12/23-14:18:52.383 8d64 Recovering log #898
-2025/12/23-14:18:52.387 8d64 Delete type=0 #898
-2025/12/23-14:18:52.387 8d64 Delete type=3 #897
-2025/12/23-16:48:09.827 c24 Level-0 table #902: started
-2025/12/23-16:48:09.827 c24 Level-0 table #902: 0 bytes OK
-2025/12/23-16:48:09.834 c24 Delete type=0 #900
-2025/12/23-16:48:09.869 c24 Manual compaction at level-0 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
-2025/12/23-16:48:09.891 c24 Manual compaction at level-1 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
