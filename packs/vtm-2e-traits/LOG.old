@@ -1,0 +1,8 @@
+2025/12/28-17:56:01.833 25a4 Recovering log #1000
+2025/12/28-17:56:01.837 25a4 Delete type=0 #1000
+2025/12/28-17:56:01.838 25a4 Delete type=3 #998
+2025/12/28-18:03:29.366 a5c4 Level-0 table #1005: started
+2025/12/28-18:03:29.366 a5c4 Level-0 table #1005: 0 bytes OK
+2025/12/28-18:03:29.372 a5c4 Delete type=0 #1003
+2025/12/28-18:03:29.372 a5c4 Manual compaction at level-0 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)
+2025/12/28-18:03:29.372 a5c4 Manual compaction at level-1 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)
