@@ -116,7 +116,7 @@ body {
 .ProseMirror .editor-content,
 .journal-page .ProseMirror,
 .journal-entry .ProseMirror {
-  font-family: "SAA-Goudy Bold", Verdana, Helvetica, sans-serif;
+  font-family: "SAA-Goudy", Verdana, Helvetica, sans-serif;
   font-weight: 400;
 }
 
