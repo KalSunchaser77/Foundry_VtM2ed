@@ -1,8 +1,0 @@
-2025/12/27-17:31:56.812 51dc Recovering log #942
-2025/12/27-17:31:56.828 51dc Delete type=0 #942
-2025/12/27-17:31:56.828 51dc Delete type=3 #941
-2025/12/27-19:17:35.590 b798 Level-0 table #946: started
-2025/12/27-19:17:35.590 b798 Level-0 table #946: 0 bytes OK
-2025/12/27-19:17:35.596 b798 Delete type=0 #944
-2025/12/27-19:17:35.596 b798 Manual compaction at level-0 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
-2025/12/27-19:17:35.596 b798 Manual compaction at level-1 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
