@@ -1,0 +1,8 @@
+2025/12/28-17:04:26.027 13fc Recovering log #996
+2025/12/28-17:04:26.040 13fc Delete type=0 #996
+2025/12/28-17:04:26.041 13fc Delete type=3 #994
+2025/12/28-17:51:37.916 a5c4 Level-0 table #1001: started
+2025/12/28-17:51:37.916 a5c4 Level-0 table #1001: 0 bytes OK
+2025/12/28-17:51:37.922 a5c4 Delete type=0 #999
+2025/12/28-17:51:37.941 a5c4 Manual compaction at level-0 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)
+2025/12/28-17:51:37.941 a5c4 Manual compaction at level-1 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)

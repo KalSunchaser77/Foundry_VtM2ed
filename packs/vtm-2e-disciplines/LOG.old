@@ -1,0 +1,8 @@
+2025/12/28-16:56:17.754 28bc Recovering log #1027
+2025/12/28-16:56:17.769 28bc Delete type=0 #1027
+2025/12/28-16:56:17.769 28bc Delete type=3 #1025
+2025/12/28-17:00:29.548 a5c4 Level-0 table #1032: started
+2025/12/28-17:00:29.548 a5c4 Level-0 table #1032: 0 bytes OK
+2025/12/28-17:00:29.554 a5c4 Delete type=0 #1030
+2025/12/28-17:00:29.554 a5c4 Manual compaction at level-0 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
+2025/12/28-17:00:29.554 a5c4 Manual compaction at level-1 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
