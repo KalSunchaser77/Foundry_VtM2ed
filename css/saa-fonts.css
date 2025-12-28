@@ -1,9 +1,7 @@
 /* ==========================================================================
    saa-fonts.css
-   Purpose: Override WoD system fonts without editing wod.css
-   Notes:
-   - Must be loaded AFTER /css/wod.css in system.json "styles".
-   - Uses your fonts stored in: /assets/fonts/
+   Hardcode Foundry UI + Journal fonts (module-free)
+   Load AFTER css/wod.css
    ========================================================================== */
 
 /* --- Font Faces --- */
@@ -19,7 +17,7 @@
 
 /* Goudy Old Style (SSi) - Bold */
 @font-face {
-  font-family: "SAA-Goudy";
+  font-family: "SAA-Goudy Bold";
   src: url("../assets/fonts/Goudy%20SSi%20Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
@@ -35,41 +33,111 @@
   font-display: swap;
 }
 
-/* --- Variable Overrides ---
-   wod.css uses --main-font everywhere for sheet UI.
-   We override it to point at your preferred UI font. */
-:root {
-  --main-font: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+/* --------------------------------------------------------------------------
+   1) GLOBAL FOUNDRY UI (what the module calls UI body font + UI title font)
+   Foundry uses CSS vars like --font-body, --font-sans, --font-h1, etc.
+   We set them on body so the whole UI picks them up.
+   -------------------------------------------------------------------------- */
+
+body {
+  /* UI body font */
+  --font-body: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  --font-sans: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  --font-primary: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+
+  /* UI title fonts (headings) */
+  --font-h1: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  --font-h2: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  --font-h3: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  --font-h4: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  --font-h5: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  --font-h6: "SAA-Goudy", Verdana, Helvetica, sans-serif;
 }
 
-/* --- UI Title Font (Window headers / prominent headings) ---
-   Foundry v13 headers are mostly controlled by the default theme,
-   so we target common title elements. Keep the selector list conservative. */
-.wod20.window-app .window-header,
-.wod20.window-app .window-title,
-.wod20.window-app h1,
-.wod20.window-app h2,
-.wod20.window-app h3 {
-  font-family: "SAA-Goudy", Verdana, Helvetica, sans-serif;
-  font-weight: 700;
-}
+/* --------------------------------------------------------------------------
+   2) JOURNAL BODY FONT (what the module calls journal body font)
+   We set the same vars inside journal containers to be explicit.
+   (You said you want journal body to be Goudy Bold.)
+   -------------------------------------------------------------------------- */
 
-/* --- Journal Fonts ---
-   If your system uses ProseMirror, these selectors cover most journal bodies/titles. */
-
-/* Journal body */
-.journal-entry-content,
+.journal-entry,
+.journal-sheet,
+.journal-page,
+.journal-entry-page,
 .journal-page-content,
-.prosemirror,
-.prosemirror .editor-content {
-  font-family: "SAA-Goudy", Verdana, Helvetica, sans-serif;
-  font-weight: 700; /* per your preference: journal body bold */
+.journal-entry-content {
+  --font-body: "SAA-Goudy Bold", Verdana, Helvetica, sans-serif;
+  --font-sans: "SAA-Goudy Bold", Verdana, Helvetica, sans-serif;
+  --font-serif: "SAA-Goudy Bold", Verdana, Helvetica, sans-serif;
+  --font-primary: "SAA-Goudy Bold", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
 }
 
-/* Journal titles */
+/* ProseMirror editor surface (journal edit mode) */
+.prosemirror,
+.prosemirror .editor-content,
+.journal-page .prosemirror,
+.journal-entry .prosemirror {
+  font-family: "SAA-Goudy Bold", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+/* --------------------------------------------------------------------------
+   3) JOURNAL TITLE FONT
+   Keep your “happy accident”: Delavan on journal headers / page titles.
+   (This is intentionally narrow so we don't wreck other UI headings.)
+   -------------------------------------------------------------------------- */
+
 .journal-header .title,
-.journal-page-header h1,
-.journal-page-header h2 {
+.journal-entry h1,
+.journal-entry h2,
+.journal-entry h3,
+.journal-entry h4,
+.journal-entry h5,
+.journal-entry h6,
+.journal-entry-page h1,
+.journal-entry-page h2,
+.journal-entry-page h3,
+.journal-entry-page h4,
+.journal-entry-page h5,
+.journal-entry-page h6,
+.journal-page h1,
+.journal-page h2,
+.journal-page h3,
+.journal-page h4,
+.journal-page h5,
+.journal-page h6 {
   font-family: "SAA-Delavan", "SAA-Goudy", Verdana, Helvetica, sans-serif;
   font-weight: 400;
+}
+
+/* ProseMirror editor surface (journal edit mode) - Foundry uses .ProseMirror */
+.ProseMirror,
+.ProseMirror .editor-content,
+.journal-page .ProseMirror,
+.journal-entry .ProseMirror {
+  font-family: "SAA-Goudy Bold", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+/* Journal blockquotes (view + edit) should match journal body font */
+.journal-entry blockquote,
+.journal-page blockquote,
+.journal-entry-page blockquote,
+.journal-page-content blockquote,
+.journal-entry-content blockquote,
+.journal-entry .ProseMirror blockquote,
+.journal-page .ProseMirror blockquote {
+  font-family: var(--font-body);
+  font-weight: inherit;
+}
+
+
+/* --------------------------------------------------------------------------
+   4) KEEP YOUR SYSTEM VARIABLE TOO (optional, but harmless)
+   wod.css uses --main-font heavily for sheet UI
+   -------------------------------------------------------------------------- */
+
+:root {
+  --main-font: "SAA-Goudy", Verdana, Helvetica, sans-serif;
 }
