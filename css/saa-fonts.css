@@ -1,0 +1,75 @@
+/* ==========================================================================
+   saa-fonts.css
+   Purpose: Override WoD system fonts without editing wod.css
+   Notes:
+   - Must be loaded AFTER /css/wod.css in system.json "styles".
+   - Uses your fonts stored in: /assets/fonts/
+   ========================================================================== */
+
+/* --- Font Faces --- */
+
+/* Goudy Old Style (SSi) - Regular */
+@font-face {
+  font-family: "SAA-Goudy";
+  src: url("../assets/fonts/Goudy%20SSi.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Goudy Old Style (SSi) - Bold */
+@font-face {
+  font-family: "SAA-Goudy";
+  src: url("../assets/fonts/Goudy%20SSi%20Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Delavan (Journal Titles) */
+@font-face {
+  font-family: "SAA-Delavan";
+  src: url("../assets/fonts/delavan.TTF") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Variable Overrides ---
+   wod.css uses --main-font everywhere for sheet UI.
+   We override it to point at your preferred UI font. */
+:root {
+  --main-font: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+}
+
+/* --- UI Title Font (Window headers / prominent headings) ---
+   Foundry v13 headers are mostly controlled by the default theme,
+   so we target common title elements. Keep the selector list conservative. */
+.wod20.window-app .window-header,
+.wod20.window-app .window-title,
+.wod20.window-app h1,
+.wod20.window-app h2,
+.wod20.window-app h3 {
+  font-family: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+/* --- Journal Fonts ---
+   If your system uses ProseMirror, these selectors cover most journal bodies/titles. */
+
+/* Journal body */
+.journal-entry-content,
+.journal-page-content,
+.prosemirror,
+.prosemirror .editor-content {
+  font-family: "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  font-weight: 700; /* per your preference: journal body bold */
+}
+
+/* Journal titles */
+.journal-header .title,
+.journal-page-header h1,
+.journal-page-header h2 {
+  font-family: "SAA-Delavan", "SAA-Goudy", Verdana, Helvetica, sans-serif;
+  font-weight: 400;
+}
