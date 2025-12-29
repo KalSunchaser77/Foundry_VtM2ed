@@ -1,0 +1,8 @@
+2025/12/29-15:59:05.222 6dbc Recovering log #1074
+2025/12/29-15:59:05.237 6dbc Delete type=0 #1074
+2025/12/29-15:59:05.237 6dbc Delete type=3 #1073
+2025/12/29-16:01:45.574 8094 Level-0 table #1078: started
+2025/12/29-16:01:45.574 8094 Level-0 table #1078: 0 bytes OK
+2025/12/29-16:01:45.583 8094 Delete type=0 #1076
+2025/12/29-16:01:45.603 8094 Manual compaction at level-0 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
+2025/12/29-16:01:45.603 8094 Manual compaction at level-1 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
