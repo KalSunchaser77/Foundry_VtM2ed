@@ -1,8 +1,0 @@
-2025/12/28-19:49:12.240 a4fc Recovering log #1011
-2025/12/28-19:49:12.244 a4fc Delete type=0 #1011
-2025/12/28-19:49:12.245 a4fc Delete type=3 #1010
-2025/12/28-19:56:04.075 3058 Level-0 table #1015: started
-2025/12/28-19:56:04.076 3058 Level-0 table #1015: 0 bytes OK
-2025/12/28-19:56:04.084 3058 Delete type=0 #1013
-2025/12/28-19:56:04.103 3058 Manual compaction at level-0 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)
-2025/12/28-19:56:04.103 3058 Manual compaction at level-1 from '!journal!00T159wGrc77fq2u' @ 72057594037927935 : 1 .. '!journal.pages!shKfkVoXGbvXRGgm.rkXSojIUR6QMXXJY' @ 0 : 0; will stop at (end)
