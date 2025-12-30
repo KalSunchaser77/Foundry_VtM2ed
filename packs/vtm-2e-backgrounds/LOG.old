@@ -1,8 +1,0 @@
-2025/12/29-17:23:57.733 6dbc Recovering log #1018
-2025/12/29-17:23:57.747 6dbc Delete type=0 #1018
-2025/12/29-17:23:57.747 6dbc Delete type=3 #1016
-2025/12/29-19:19:36.166 8094 Level-0 table #1023: started
-2025/12/29-19:19:36.166 8094 Level-0 table #1023: 0 bytes OK
-2025/12/29-19:19:36.168 8094 Delete type=0 #1021
-2025/12/29-19:19:36.168 8094 Manual compaction at level-0 from '!items!1bEh7LFvCxcjPGyX' @ 72057594037927935 : 1 .. '!items!qUxKm5FAOLLyKwOC' @ 0 : 0; will stop at (end)
-2025/12/29-19:19:36.173 8094 Manual compaction at level-1 from '!items!1bEh7LFvCxcjPGyX' @ 72057594037927935 : 1 .. '!items!qUxKm5FAOLLyKwOC' @ 0 : 0; will stop at (end)
