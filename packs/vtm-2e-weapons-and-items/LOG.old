@@ -1,7 +1,0 @@
-2026/01/01-15:37:21.457 338 Recovering log #999
-2026/01/01-15:37:21.461 338 Delete type=0 #999
-2026/01/01-15:37:21.462 338 Delete type=3 #997
-2026/01/01-15:48:00.701 c5ac Level-0 table #1004: started
-2026/01/01-15:48:00.701 c5ac Level-0 table #1004: 0 bytes OK
-2026/01/01-15:48:00.703 c5ac Delete type=0 #1002
-2026/01/01-15:48:00.707 c5ac Manual compaction at level-0 from '!folders!1hjABMQxBVpbDPLx' @ 72057594037927935 : 1 .. '!items!wOaHweudxMPecEOd' @ 0 : 0; will stop at (end)
