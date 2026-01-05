@@ -1,0 +1,8 @@
+2026/01/05-09:23:08.495 cdbc Recovering log #1186
+2026/01/05-09:23:08.500 cdbc Delete type=0 #1186
+2026/01/05-09:23:08.500 cdbc Delete type=3 #1185
+2026/01/05-10:26:07.142 5124 Level-0 table #1190: started
+2026/01/05-10:26:07.142 5124 Level-0 table #1190: 0 bytes OK
+2026/01/05-10:26:07.150 5124 Delete type=0 #1188
+2026/01/05-10:26:07.170 5124 Manual compaction at level-0 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
+2026/01/05-10:26:07.170 5124 Manual compaction at level-1 from '!folders!DU1WGdHZDaPCne5H' @ 72057594037927935 : 1 .. '!items!zAL4Nz5mULLVPimP' @ 0 : 0; will stop at (end)
