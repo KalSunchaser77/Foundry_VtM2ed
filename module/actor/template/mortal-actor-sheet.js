@@ -863,93 +863,78 @@ export default class MortalActorSheet extends foundry.appv1.sheets.ActorSheet {
 		});
 	}
 	
-	/* Clicked health boxes */
-	async _onSquareCounterChange(event) {
-		event.preventDefault();
+/* Clicked health boxes - VtM 2e: Standard (/) + Aggravated (x) only */
+async _onSquareCounterChange(event) {
+  event.preventDefault();
 
-		const element = event.currentTarget;
-		const oldState = element.dataset.state || "";
-		const states = parseCounterStates("/:bashing,x:lethal,*:aggravated");
-		const dataset = element.dataset;
-		const type = dataset.type;
+  const element = event.currentTarget;
+  const oldState = element.dataset.state || "";
+  const { type } = element.dataset;
 
-		const allStates = ["", ...Object.keys(states)];
-		const currentState = allStates.indexOf(oldState);
+  if (type !== CONFIG.worldofdarkness.sheettype.mortal) return;
 
-		if (type != CONFIG.worldofdarkness.sheettype.mortal) {
-			return;
-		}
-		
-		if (currentState < 0) {
-			return;
-		}
-		
-		const actorData = foundry.utils.duplicate(this.actor);
+  const actorData = foundry.utils.duplicate(this.actor);
 
-		if (oldState == "") {
-			actorData.system.health.damage.bashing = parseInt(actorData.system.health.damage.bashing) + 1;
-		}
-		else if (oldState == "/") { 
-			actorData.system.health.damage.bashing = parseInt(actorData.system.health.damage.bashing) - 1;
-			actorData.system.health.damage.lethal = parseInt(actorData.system.health.damage.lethal) + 1;			
-		}
-		else if (oldState == "x") { 
-			actorData.system.health.damage.lethal = parseInt(actorData.system.health.damage.lethal) - 1;
-			actorData.system.health.damage.aggravated = parseInt(actorData.system.health.damage.aggravated) + 1;
-		}
-		else if (oldState == "*") { 
-			actorData.system.health.damage.aggravated = parseInt(actorData.system.health.damage.aggravated) - 1;
-		}
+  // Cycle: "" -> "/" -> "x" -> ""
+  if (oldState === "") {
+    actorData.system.health.damage.bashing = (parseInt(actorData.system.health.damage.bashing) || 0) + 1;
+  }
+  else if (oldState === "/") {
+    actorData.system.health.damage.bashing = (parseInt(actorData.system.health.damage.bashing) || 0) - 1;
+    actorData.system.health.damage.aggravated = (parseInt(actorData.system.health.damage.aggravated) || 0) + 1;
+  }
+  else if (oldState === "x") {
+    actorData.system.health.damage.aggravated = (parseInt(actorData.system.health.damage.aggravated) || 0) - 1;
+  }
+  else {
+    // If any legacy "*" state exists on a box, treat it like aggravated and clear it
+    actorData.system.health.damage.aggravated = (parseInt(actorData.system.health.damage.aggravated) || 0) - 1;
+  }
 
-		if (parseInt(actorData.system.health.damage.bashing) < 0) {
-			actorData.system.health.damage.bashing = 0;
-		}
+  // Clamp
+  actorData.system.health.damage.bashing = Math.max(0, parseInt(actorData.system.health.damage.bashing) || 0);
+  actorData.system.health.damage.lethal = Math.max(0, parseInt(actorData.system.health.damage.lethal) || 0); // left intact for compatibility
+  actorData.system.health.damage.aggravated = Math.max(0, parseInt(actorData.system.health.damage.aggravated) || 0);
 
-		if (parseInt(actorData.system.health.damage.lethal) < 0) {
-			actorData.system.health.damage.lethal = 0;
-		}
+  actorData.system.settings.isupdated = false;
+  await this.actor.update(actorData);
+  this.render();
+}
 
-		if (parseInt(actorData.system.health.damage.aggravated) < 0) {
-			actorData.system.health.damage.aggravated = 0;
-		}
+/* Clear health boxes - VtM 2e: Standard (/) + Aggravated (x) only */
+async _onSquareCounterClear(event) {
+  event.preventDefault();
 
-		actorData.system.settings.isupdated = false;
-		await this.actor.update(actorData);
-		this.render();
-	}
+  const element = event.currentTarget;
+  const oldState = element.dataset.state || "";
+  const { type } = element.dataset;
 
-	/* Clear health boxes */
-	async _onSquareCounterClear(event) {
-		event.preventDefault();
+  if (type !== CONFIG.worldofdarkness.sheettype.mortal) return;
 
-		const element = event.currentTarget;
-		const oldState = element.dataset.state || "";
-		const dataset = element.dataset;
-		const type = dataset.type;
+  if (oldState === "") return;
 
-		if (type != CONFIG.worldofdarkness.sheettype.mortal) {
-			return;
-		}
+  const actorData = foundry.utils.duplicate(this.actor);
 
-		const actorData = foundry.utils.duplicate(this.actor);
+  if (oldState === "/") {
+    actorData.system.health.damage.bashing = (parseInt(actorData.system.health.damage.bashing) || 0) - 1;
+  }
+  else if (oldState === "x") {
+    actorData.system.health.damage.aggravated = (parseInt(actorData.system.health.damage.aggravated) || 0) - 1;
+  }
+  else {
+    // Legacy "*" state: treat as aggravated
+    actorData.system.health.damage.aggravated = (parseInt(actorData.system.health.damage.aggravated) || 0) - 1;
+  }
 
-		if (oldState == "") {
-			return
-		}
-		else if (oldState == "/") { 
-			actorData.system.health.damage.bashing = parseInt(actorData.system.health.damage.bashing) - 1;
-		}
-		else if (oldState == "x") { 
-			actorData.system.health.damage.lethal = parseInt(actorData.system.health.damage.lethal) - 1;
-		}
-		else if (oldState == "*") { 
-			actorData.system.health.damage.aggravated = parseInt(actorData.system.health.damage.aggravated) - 1;
-		}
+  // Clamp
+  actorData.system.health.damage.bashing = Math.max(0, parseInt(actorData.system.health.damage.bashing) || 0);
+  actorData.system.health.damage.lethal = Math.max(0, parseInt(actorData.system.health.damage.lethal) || 0);
+  actorData.system.health.damage.aggravated = Math.max(0, parseInt(actorData.system.health.damage.aggravated) || 0);
 
-		actorData.system.settings.isupdated = false;
-		await this.actor.update(actorData);
-		this.render();
-	}	
+  actorData.system.settings.isupdated = false;
+  await this.actor.update(actorData);
+  this.render();
+}
 
 	/**
    * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
