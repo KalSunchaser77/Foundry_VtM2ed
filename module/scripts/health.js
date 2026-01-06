@@ -163,21 +163,24 @@ export async function calculateHealth(actor, type) {
 }
 
 async function calculateStatus() {
-    if (aggravated > 0) {
-        aggravated -= 1;
+  // 2e: aggravated first
+  if (aggravated > 0) {
+    aggravated -= 1;
+    return "x"; // show aggravated as X
+  }
 
-        return "*";
-    }
-    if (lethal > 0) {
-        lethal -= 1;
+  // 2e: "standard" (we’ll use bashing as the storage bucket)
+  if (bashing > 0) {
+    bashing -= 1;
+    return "/"; // show standard as /
+  }
 
-        return "x";
-    }
-    if (bashing > 0) {
-        bashing -= 1;
+  // ignore lethal entirely in 2e display
+  // (or optionally fold lethal into bashing if you want compatibility)
+  if (lethal > 0) {
+    lethal -= 1;
+    return "/"; // optional: treat lethal as standard for legacy actors
+  }
 
-        return "/";
-    }
-
-    return "";
+  return "";
 }
