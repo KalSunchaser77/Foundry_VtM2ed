@@ -1,0 +1,20 @@
+2026/01/28-14:51:34.508 ac04 Recovering log #143
+2026/01/28-14:51:34.509 ac04 Level-0 table #145: started
+2026/01/28-14:51:34.522 ac04 Level-0 table #145: 450554 bytes OK
+2026/01/28-14:51:34.533 ac04 Delete type=0 #143
+2026/01/28-14:51:34.534 ac04 Delete type=3 #141
+2026/01/28-14:51:34.534 5bc4 Compacting 4@0 + 1@1 files
+2026/01/28-14:51:34.547 5bc4 Generated table #147@0: 15 keys, 95927 bytes
+2026/01/28-14:51:34.547 5bc4 Compacted 4@0 + 1@1 files => 95927 bytes
+2026/01/28-14:51:34.550 5bc4 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/01/28-14:51:34.550 5bc4 Delete type=2 #133
+2026/01/28-14:51:34.551 5bc4 Delete type=2 #136
+2026/01/28-14:51:34.551 5bc4 Delete type=2 #139
+2026/01/28-14:51:34.551 5bc4 Delete type=2 #142
+2026/01/28-14:51:34.551 5bc4 Delete type=2 #145
+2026/01/28-16:18:49.640 5bc4 Compacting 1@1 + 1@2 files
+2026/01/28-16:18:49.673 5bc4 Generated table #148@1: 90 keys, 411964 bytes
+2026/01/28-16:18:49.673 5bc4 Compacted 1@1 + 1@2 files => 411964 bytes
+2026/01/28-16:18:49.680 5bc4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/01/28-16:18:49.680 5bc4 Delete type=2 #131
+2026/01/28-16:18:49.680 5bc4 Delete type=2 #147
