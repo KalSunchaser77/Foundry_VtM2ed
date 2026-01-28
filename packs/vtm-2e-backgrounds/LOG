@@ -1,8 +1,0 @@
-2026/01/06-13:22:24.766 ca30 Recovering log #1138
-2026/01/06-13:22:24.781 ca30 Delete type=0 #1138
-2026/01/06-13:22:24.781 ca30 Delete type=3 #1137
-2026/01/06-13:43:37.718 c2ec Level-0 table #1142: started
-2026/01/06-13:43:37.718 c2ec Level-0 table #1142: 0 bytes OK
-2026/01/06-13:43:37.725 c2ec Delete type=0 #1140
-2026/01/06-13:43:37.730 c2ec Manual compaction at level-0 from '!items!1bEh7LFvCxcjPGyX' @ 72057594037927935 : 1 .. '!items!qUxKm5FAOLLyKwOC' @ 0 : 0; will stop at (end)
-2026/01/06-13:43:37.730 c2ec Manual compaction at level-1 from '!items!1bEh7LFvCxcjPGyX' @ 72057594037927935 : 1 .. '!items!qUxKm5FAOLLyKwOC' @ 0 : 0; will stop at (end)

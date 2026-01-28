@@ -1,8 +1,0 @@
-2026/01/06-13:22:24.796 bfcc Recovering log #1089
-2026/01/06-13:22:24.812 bfcc Delete type=0 #1089
-2026/01/06-13:22:24.812 bfcc Delete type=3 #1088
-2026/01/06-13:43:37.711 c2ec Level-0 table #1093: started
-2026/01/06-13:43:37.711 c2ec Level-0 table #1093: 0 bytes OK
-2026/01/06-13:43:37.717 c2ec Delete type=0 #1091
-2026/01/06-13:43:37.730 c2ec Manual compaction at level-0 from '!journal!56TUNkUK8jfO7deW' @ 72057594037927935 : 1 .. '!journal.pages!tFBnWzX8O9f3VHbi.uspi2hU4tJiw6vb1' @ 0 : 0; will stop at (end)
-2026/01/06-13:43:37.730 c2ec Manual compaction at level-1 from '!journal!56TUNkUK8jfO7deW' @ 72057594037927935 : 1 .. '!journal.pages!tFBnWzX8O9f3VHbi.uspi2hU4tJiw6vb1' @ 0 : 0; will stop at (end)
