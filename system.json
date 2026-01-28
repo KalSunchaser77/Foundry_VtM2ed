@@ -2,7 +2,7 @@
   "id": "vtm20-2e-saa",
   "title": "WoD 20th VtM 2e Rule Varient",
   "description": "To play World of Darkness 20th ed. Includes special support for VtM 2nd Ed. Support for all the larger and most of the smaller games of the gameline. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. For more information please visit worldofdarkness.com.",
-  "version": "0.2.2.57",
+  "version": "0.2.2.58",
   "compatibility": {
     "minimum": "13",
     "verified": "13",
@@ -18,6 +18,12 @@
     "name": "vtm2e-disciplines",
     "label": "VtM 2e – Disciplines",
     "path": "packs/vtm-2e-disciplines",
+    "type": "Item"
+  },
+  {
+    "name": "vtm2e-experience",
+    "label": "VtM 2e – Experience",
+    "path": "packs/vtm-2e-experience",
     "type": "Item"
   },
   {
@@ -75,6 +81,7 @@
         "packs": [
           "vtm-2e-backgrounds",
           "vtm2e-disciplines",
+          "vtm2e-experience",
           "vtm-2e-weapons-and-items"
         ]
       }
