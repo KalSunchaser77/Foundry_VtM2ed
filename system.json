@@ -2,7 +2,7 @@
   "id": "vtm20-2e-saa",
   "title": "WoD 20th VtM 2e Rule Varient",
   "description": "To play World of Darkness 20th ed. Includes special support for VtM 2nd Ed. Support for all the larger and most of the smaller games of the gameline. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. For more information please visit worldofdarkness.com.",
-  "version": "0.2.2.62",
+  "version": "0.2.2.63",
   "compatibility": {
     "minimum": "13",
     "verified": "13",
@@ -12,6 +12,12 @@
     "name": "vtm-2e-mortals",
     "label": "VtM 2e – Mortals",
     "path": "packs/vtm-2e-mortals",
+    "type": "Actor"
+  },
+  {
+    "name": "vtm-2e-vampires",
+    "label": "VtM 2e – Vampires",
+    "path": "packs/vtm-2e-vampires",
     "type": "Actor"
   },
   {
@@ -71,7 +77,8 @@
         "sorting": "m",
         "color": "#000000",
         "packs": [
-          "vtm-2e-mortals"
+          "vtm-2e-mortals",
+		  "vtm-2e-vampires"
         ]
       },
       {
