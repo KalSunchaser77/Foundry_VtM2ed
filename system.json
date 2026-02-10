@@ -16,7 +16,7 @@
     "ownership": {
     "PLAYER": "NONE",
     "TRUSTED": "NONE",
-    "ASSISTANT": "OWNER",
+    "ASSISTANT": "NONE",
     "GAMEMASTER": "OWNER"
   },
   {
