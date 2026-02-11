@@ -12,12 +12,13 @@
     "name": "vtm-2e-core-rules-npcs",
     "label": "VtM 2e – Core Rules (NPCs)",
     "path": "packs/vtm-2e-core-rules-npcs",
-    "type": "Actor"
+    "type": "Actor",
     "ownership": {
     "PLAYER": "NONE",
     "TRUSTED": "NONE",
     "ASSISTANT": "NONE",
     "GAMEMASTER": "OWNER"
+	}
   },
   {
     "name": "vtm2e-disciplines",
