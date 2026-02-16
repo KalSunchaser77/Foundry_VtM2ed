@@ -533,7 +533,7 @@ export class DialogWeapon extends FormApplication {
             }
 
             // Attack dice pool includes attack bonus (accuracy etc.)
-            numDices = toInt(this.object.attributeValue, 0) + toInt(this.object.abilityValue, 0) + toInt(this.object.bonus, 0);
+            numDices = toInt(this.object.attributeValue, 0) + toInt(this.object.abilityValue, 0);
         }
 
         let specialityText = "";
