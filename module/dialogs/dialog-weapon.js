@@ -532,7 +532,7 @@ export class DialogWeapon extends FormApplication {
                 woundPenaltyVal = toInt(this.actor.system.health.damage.woundpenalty, 0);
             }
 
-            // Attack dice pool includes attack bonus (accuracy etc.)
+            // Attack dice pool includes attack bonus (removed accuracy etc.)
             numDices = toInt(this.object.attributeValue, 0) + toInt(this.object.abilityValue, 0);
         }
 
