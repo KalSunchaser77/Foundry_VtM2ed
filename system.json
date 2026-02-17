@@ -114,6 +114,7 @@
     "TRUSTED": "NONE",
     "ASSISTANT": "NONE",
     "GAMEMASTER": "OWNER"
+	}
   }
 ],
   "packFolders": [{
