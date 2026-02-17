@@ -32,9 +32,11 @@ export class MeleeWeapon {
 
         // NOTE: Melee weapons may not have accuracy defined; natural weapons do.
         // We still allow it as an ATTACK bonus only.
-        this.bonus = toInt(item.system?.attack?.["accuracy"], 0);
-        this.difficulty = toInt(item.system?.["difficulty"], -1);
-        this.accuracy = toInt(item.system?.attack?.["accuracy"], 0);
+// VtM 2e: "Accuracy" is not used as an attack bonus in this system.
+// Any legacy item.system.attack.accuracy values are ignored (kept only for backward-compat data).
+this.bonus = 0;
+this.difficulty = toInt(item.system?.["difficulty"], -1);
+this.accuracy = 0;
 
         this.usedReducedDiff = false;
         this.hasburst = false;
@@ -77,9 +79,11 @@ export class RangedWeapon {
         this.dice2 = item.system.attack["ability"];
 
         // Firearms accuracy (if present) is treated as an ATTACK bonus only.
-        this.bonus = toInt(item.system?.attack?.["accuracy"], 0);
-        this.difficulty = toInt(item.system?.["difficulty"], -1);
-        this.accuracy = toInt(item.system?.attack?.["accuracy"], 0);
+// VtM 2e: "Accuracy" is not used as an attack bonus in this system.
+// Any legacy item.system.attack.accuracy values are ignored (kept only for backward-compat data).
+this.bonus = 0;
+this.difficulty = toInt(item.system?.["difficulty"], -1);
+this.accuracy = 0;
 
         this.usedReducedDiff = false;
         this.hasburst = !!item.system?.mode?.["hasburst"];
