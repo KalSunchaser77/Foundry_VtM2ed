@@ -2,7 +2,7 @@
   "id": "vtm20-2e-saa",
   "title": "WoD 20th VtM 2e Rule Varient",
   "description": "To play World of Darkness 20th ed. Includes special support for VtM 2nd Ed. Support for all the larger and most of the smaller games of the gameline. Portions of the materials are the copyrights and trademarks of Paradox Interactive AB, and are used with permission. All rights reserved. For more information please visit worldofdarkness.com.",
-  "version": "0.2.2.81",
+  "version": "0.2.2.82",
   "compatibility": {
     "minimum": "13",
     "verified": "13",
@@ -12,13 +12,7 @@
     "name": "vtm-2e-macros",
     "label": "VtM 2e – Macros",
     "path": "packs/vtm-2e-macros",
-    "type": "Macro",
-    "ownership": {
-    "PLAYER": "NONE",
-    "TRUSTED": "NONE",
-    "ASSISTANT": "NONE",
-    "GAMEMASTER": "OWNER"
-	}
+    "type": "Macro"
   },
   {
     "name": "vtm-2e-core-rules-npcs",
@@ -48,73 +42,37 @@
     "name": "vtm2e-disciplines",
     "label": "VtM 2e – Disciplines",
     "path": "packs/vtm-2e-disciplines",
-    "type": "Item",
-    "ownership": {
-    "PLAYER": "NONE",
-    "TRUSTED": "NONE",
-    "ASSISTANT": "NONE",
-    "GAMEMASTER": "OWNER"
-	}
+    "type": "Item"
   },
   {
     "name": "vtm2e-experience",
     "label": "VtM 2e – Experience",
     "path": "packs/vtm-2e-experience",
-    "type": "Item",
-    "ownership": {
-    "PLAYER": "NONE",
-    "TRUSTED": "NONE",
-    "ASSISTANT": "NONE",
-    "GAMEMASTER": "OWNER"
-	}
+    "type": "Item"
   },
   {
     "name": "vtm-2e-backgrounds",
     "label": "VtM 2e – Backgrounds",
     "path": "packs/vtm-2e-backgrounds",
-    "type": "Item",
-    "ownership": {
-    "PLAYER": "NONE",
-    "TRUSTED": "NONE",
-    "ASSISTANT": "NONE",
-    "GAMEMASTER": "OWNER"
-	}
+    "type": "Item"
   },
   {
     "name": "vtm-2e-weapons-and-items",
     "label": "VtM 2e – Weapons & Armor",
     "path": "packs/vtm-2e-weapons-and-items",
-    "type": "Item",
-    "ownership": {
-    "PLAYER": "NONE",
-    "TRUSTED": "NONE",
-    "ASSISTANT": "NONE",
-    "GAMEMASTER": "OWNER"
-	}
+    "type": "Item"
   },
   {
     "name": "vtm-2e-getting-started",
     "label": "VtM 2e – Getting Started",
     "path": "packs/vtm-2e-getting-started",
-    "type": "JournalEntry",
-    "ownership": {
-    "PLAYER": "NONE",
-    "TRUSTED": "NONE",
-    "ASSISTANT": "NONE",
-    "GAMEMASTER": "OWNER"
-	}
+    "type": "JournalEntry"
   },
   {
     "name": "vtm-2e-core-rules",
     "label": "VtM 2e – Core Rules",
     "path": "packs/vtm-2e-core-rules",
-    "type": "JournalEntry",
-    "ownership": {
-    "PLAYER": "NONE",
-    "TRUSTED": "NONE",
-    "ASSISTANT": "NONE",
-    "GAMEMASTER": "OWNER"
-	}
+    "type": "JournalEntry"
   }
 ],
   "packFolders": [{
