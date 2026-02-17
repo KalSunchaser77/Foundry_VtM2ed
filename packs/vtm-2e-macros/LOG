@@ -1,0 +1,15 @@
+2026/02/17-14:08:03.068 75a8 Recovering log #12
+2026/02/17-14:08:03.081 75a8 Delete type=0 #12
+2026/02/17-14:08:03.081 75a8 Delete type=3 #10
+2026/02/17-14:30:55.001 be90 Level-0 table #17: started
+2026/02/17-14:30:55.004 be90 Level-0 table #17: 14333 bytes OK
+2026/02/17-14:30:55.005 be90 Delete type=0 #15
+2026/02/17-14:30:55.008 be90 Manual compaction at level-0 from '!folders!q9RDp7tlqE4D8oHK' @ 72057594037927935 : 1 .. '!macros!yguhNWGuqLB19ixe' @ 0 : 0; will stop at (end)
+2026/02/17-14:30:55.008 be90 Manual compaction at level-1 from '!folders!q9RDp7tlqE4D8oHK' @ 72057594037927935 : 1 .. '!macros!yguhNWGuqLB19ixe' @ 0 : 0; will stop at '!macros!yguhNWGuqLB19ixe' @ 7 : 1
+2026/02/17-14:30:55.008 be90 Compacting 1@1 + 1@2 files
+2026/02/17-14:30:55.012 be90 Generated table #18@1: 3 keys, 14391 bytes
+2026/02/17-14:30:55.012 be90 Compacted 1@1 + 1@2 files => 14391 bytes
+2026/02/17-14:30:55.013 be90 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/02/17-14:30:55.013 be90 Delete type=2 #5
+2026/02/17-14:30:55.013 be90 Delete type=2 #17
+2026/02/17-14:30:55.015 be90 Manual compaction at level-1 from '!macros!yguhNWGuqLB19ixe' @ 7 : 1 .. '!macros!yguhNWGuqLB19ixe' @ 0 : 0; will stop at (end)
