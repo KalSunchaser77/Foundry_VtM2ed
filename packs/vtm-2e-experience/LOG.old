@@ -1,7 +1,0 @@
-2026/02/17-14:07:16.879 8a20 Recovering log #216
-2026/02/17-14:07:16.883 8a20 Delete type=0 #216
-2026/02/17-14:07:16.883 8a20 Delete type=3 #214
-2026/02/17-14:07:37.257 be90 Level-0 table #221: started
-2026/02/17-14:07:37.257 be90 Level-0 table #221: 0 bytes OK
-2026/02/17-14:07:37.259 be90 Delete type=0 #219
-2026/02/17-14:07:37.264 be90 Manual compaction at level-0 from '!folders!PwZQN3wz2jkkRhpm' @ 72057594037927935 : 1 .. '!items!y3FFt4I87pUFqGAB' @ 0 : 0; will stop at (end)

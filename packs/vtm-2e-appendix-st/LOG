@@ -1,7 +1,0 @@
-2026/02/17-14:08:03.051 75b8 Recovering log #67
-2026/02/17-14:08:03.063 75b8 Delete type=0 #67
-2026/02/17-14:08:03.063 75b8 Delete type=3 #65
-2026/02/17-14:30:54.988 be90 Level-0 table #72: started
-2026/02/17-14:30:54.988 be90 Level-0 table #72: 0 bytes OK
-2026/02/17-14:30:54.991 be90 Delete type=0 #70
-2026/02/17-14:30:54.999 be90 Manual compaction at level-0 from '!journal!WV55revCFlZ2Spcs' @ 72057594037927935 : 1 .. '!journal.pages!WV55revCFlZ2Spcs.t2Ni1evl5Upi0yyx' @ 0 : 0; will stop at (end)
