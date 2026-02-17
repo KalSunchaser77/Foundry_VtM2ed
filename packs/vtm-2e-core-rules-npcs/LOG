@@ -1,8 +1,0 @@
-2026/02/17-11:20:35.970 9470 Recovering log #125
-2026/02/17-11:20:35.975 9470 Delete type=0 #125
-2026/02/17-11:20:35.975 9470 Delete type=3 #124
-2026/02/17-11:26:05.874 bcc8 Level-0 table #129: started
-2026/02/17-11:26:05.874 bcc8 Level-0 table #129: 0 bytes OK
-2026/02/17-11:26:05.879 bcc8 Delete type=0 #127
-2026/02/17-11:26:05.890 bcc8 Manual compaction at level-0 from '!actors!0zMDuEx4Ya2OXKde' @ 72057594037927935 : 1 .. '!folders!yJye0hUBT02UzjUH' @ 0 : 0; will stop at (end)
-2026/02/17-11:26:05.903 bcc8 Manual compaction at level-1 from '!actors!0zMDuEx4Ya2OXKde' @ 72057594037927935 : 1 .. '!folders!yJye0hUBT02UzjUH' @ 0 : 0; will stop at (end)
