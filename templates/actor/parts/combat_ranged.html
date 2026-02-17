@@ -2,7 +2,7 @@
     <div class="width-namebox">{{localize "wod.labels.combat.ranged"}}</div>     
     <div class="width-smallbox">{{localize "wod.combat.weapon.attr"}}</div>
     <div class="width-abilitybox">{{localize "wod.combat.weapon.ability"}}</div>
-    <div class="width-valuebox">{{localize "wod.combat.weapon.acc"}}</div>
+    <!-- <div class="width-valuebox">{{localize "wod.combat.weapon.acc"}}</div> -->
     <div class="width-valuebox">{{localize "wod.combat.weapon.diff"}}</div>
     <div class="width-valuebox" style="text-align: left;">{{localize "wod.combat.weapon.damage"}}</div>
     <div class="width-valuebox">{{localize "wod.combat.weapon.range"}}</div>
@@ -50,7 +50,7 @@
                         {{shorten (localize (getAbility item.system.attack.ability ../actor)) 10}}
                     {{/if}}&nbsp;
                 </div>
-                <div class="width-valuebox">{{item.system.attack.accuracy}}</div>
+                <!-- <div class="width-valuebox">{{item.system.attack.accuracy}}</div> -->
                 <div class="width-valuebox">
                     {{#if (eq item.system.difficulty "-1")}}
                         {{localize "wod.labels.varies"}}
