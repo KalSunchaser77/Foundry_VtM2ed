@@ -1,9 +1,11 @@
 import BonusHelper from "./bonus-helpers.js";
 
-export async function calculateTotals(updateData) {
-	let toForm = getForm(updateData);
+export async function calculateTotals(updateData, actorDoc = null) {
+  let toForm = getForm(updateData);
 
-	const actor = await game.actors.get(updateData._id);
+  // IMPORTANT: for unlinked tokens, game.actors.get(updateData._id) returns the *sidebar* actor,
+  // not the synthetic token actor. We must use the actor instance passed in from _onUpdate.
+  const actor = actorDoc ?? game.actors.get(updateData._id);
 
     // attributes totals
 	for (const i in updateData.system.attributes) {
