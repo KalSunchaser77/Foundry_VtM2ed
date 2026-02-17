@@ -329,7 +329,7 @@ if (isVampire || isGhoul) {
 
             // attributes totals
             // needs to be run last as all items, bonuses and changes needs to be added FIRST before total values can be calculated.
-            updateData = await calculateTotals(updateData);
+            updateData = await calculateTotals(updateData, this);
 
             // movement needs the total dexterity and all active items to work correctly.
             updateData.system.movement = await CombatHelper.CalculateMovement(updateData);
