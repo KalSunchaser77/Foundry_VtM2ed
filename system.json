@@ -60,7 +60,7 @@
     "name": "vtm2e-experience",
     "label": "VtM 2e – Experience",
     "path": "packs/vtm-2e-experience",
-    "type": "Item",,
+    "type": "Item",
     "ownership": {
     "PLAYER": "NONE",
     "TRUSTED": "NONE",
