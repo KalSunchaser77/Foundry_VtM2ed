@@ -419,7 +419,10 @@ export class DialogWeapon extends FormApplication {
         });
 
         this.object.difficulty = toInt(this.object.basedifficulty, 0) + toInt(this.object.modedifficulty, 0);
-        this.object.bonus = toInt(this.object.accuracy, 0) + toInt(this.object.modebonus, 0);
+        // Only fire mode bonus should auto-populate the modifier field.
+        // Legacy "accuracy" is intentionally ignored.
+        this.object.bonus = toInt(this.object.modebonus, 0);
+
 
         this.render();
     }
