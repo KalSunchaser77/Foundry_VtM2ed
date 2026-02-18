@@ -1,0 +1,8 @@
+2026/02/17-16:17:18.960 a770 Recovering log #1386
+2026/02/17-16:17:18.972 a770 Delete type=0 #1386
+2026/02/17-16:17:18.972 a770 Delete type=3 #1385
+2026/02/17-18:38:05.107 bfa0 Level-0 table #1390: started
+2026/02/17-18:38:05.107 bfa0 Level-0 table #1390: 0 bytes OK
+2026/02/17-18:38:05.112 bfa0 Delete type=0 #1388
+2026/02/17-18:38:05.112 bfa0 Manual compaction at level-0 from '!journal!56TUNkUK8jfO7deW' @ 72057594037927935 : 1 .. '!journal.pages!tFBnWzX8O9f3VHbi.uspi2hU4tJiw6vb1' @ 0 : 0; will stop at (end)
+2026/02/17-18:38:05.134 bfa0 Manual compaction at level-1 from '!journal!56TUNkUK8jfO7deW' @ 72057594037927935 : 1 .. '!journal.pages!tFBnWzX8O9f3VHbi.uspi2hU4tJiw6vb1' @ 0 : 0; will stop at (end)

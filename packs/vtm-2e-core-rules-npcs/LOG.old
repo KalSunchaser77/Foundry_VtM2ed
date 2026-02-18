@@ -1,0 +1,78 @@
+2026/02/17-16:17:19.031 a770 Recovering log #161
+2026/02/17-16:17:19.043 a770 Delete type=0 #161
+2026/02/17-16:17:19.044 a770 Delete type=3 #160
+2026/02/17-17:33:14.887 bfa0 Level-0 table #165: started
+2026/02/17-17:33:14.964 bfa0 Level-0 table #165: 1459689 bytes OK
+2026/02/17-17:33:14.969 bfa0 Delete type=0 #163
+2026/02/17-17:33:55.145 bfa0 Compacting 1@1 + 1@2 files
+2026/02/17-17:33:55.221 bfa0 Generated table #166@1: 1205 keys, 1321398 bytes
+2026/02/17-17:33:55.221 bfa0 Compacted 1@1 + 1@2 files => 1321398 bytes
+2026/02/17-17:33:55.226 bfa0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/02/17-17:33:55.227 bfa0 Delete type=2 #117
+2026/02/17-17:33:55.227 bfa0 Delete type=2 #165
+2026/02/17-18:01:55.927 bfa0 Level-0 table #168: started
+2026/02/17-18:01:55.972 bfa0 Level-0 table #168: 1488764 bytes OK
+2026/02/17-18:01:55.975 bfa0 Delete type=0 #164
+2026/02/17-18:02:08.055 bfa0 Compacting 1@1 + 1@2 files
+2026/02/17-18:02:08.126 bfa0 Generated table #169@1: 1477 keys, 1559019 bytes
+2026/02/17-18:02:08.126 bfa0 Compacted 1@1 + 1@2 files => 1559019 bytes
+2026/02/17-18:02:08.132 bfa0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/02/17-18:02:08.132 bfa0 Delete type=2 #166
+2026/02/17-18:02:08.133 bfa0 Delete type=2 #168
+2026/02/17-18:18:28.632 bfa0 Level-0 table #171: started
+2026/02/17-18:18:28.717 bfa0 Level-0 table #171: 1479691 bytes OK
+2026/02/17-18:18:28.726 bfa0 Delete type=0 #167
+2026/02/17-18:18:29.754 bfa0 Compacting 1@1 + 1@2 files
+2026/02/17-18:18:29.837 bfa0 Generated table #172@1: 1658 keys, 1757118 bytes
+2026/02/17-18:18:29.837 bfa0 Compacted 1@1 + 1@2 files => 1757118 bytes
+2026/02/17-18:18:29.840 bfa0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/02/17-18:18:29.840 bfa0 Delete type=2 #169
+2026/02/17-18:18:29.841 bfa0 Delete type=2 #171
+2026/02/17-18:21:35.831 bfa0 Level-0 table #174: started
+2026/02/17-18:21:35.903 bfa0 Level-0 table #174: 1449478 bytes OK
+2026/02/17-18:21:35.907 bfa0 Delete type=0 #170
+2026/02/17-18:21:56.833 bfa0 Compacting 1@1 + 1@2 files
+2026/02/17-18:21:56.918 bfa0 Generated table #175@1: 1700 keys, 1821693 bytes
+2026/02/17-18:21:56.919 bfa0 Compacted 1@1 + 1@2 files => 1821693 bytes
+2026/02/17-18:21:56.922 bfa0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/02/17-18:21:56.922 bfa0 Delete type=2 #172
+2026/02/17-18:21:56.922 bfa0 Delete type=2 #174
+2026/02/17-18:27:18.134 bfa0 Level-0 table #177: started
+2026/02/17-18:27:18.172 bfa0 Level-0 table #177: 1417570 bytes OK
+2026/02/17-18:27:18.176 bfa0 Delete type=0 #173
+2026/02/17-18:27:18.650 bfa0 Compacting 1@1 + 1@2 files
+2026/02/17-18:27:18.727 bfa0 Generated table #178@1: 1745 keys, 1889913 bytes
+2026/02/17-18:27:18.727 bfa0 Compacted 1@1 + 1@2 files => 1889913 bytes
+2026/02/17-18:27:18.731 bfa0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/02/17-18:27:18.731 bfa0 Delete type=2 #175
+2026/02/17-18:27:18.732 bfa0 Delete type=2 #177
+2026/02/17-18:30:48.972 bfa0 Level-0 table #180: started
+2026/02/17-18:30:49.029 bfa0 Level-0 table #180: 1446081 bytes OK
+2026/02/17-18:30:49.033 bfa0 Delete type=0 #176
+2026/02/17-18:30:54.259 bfa0 Compacting 1@1 + 1@2 files
+2026/02/17-18:30:54.338 bfa0 Generated table #181@1: 1792 keys, 1966972 bytes
+2026/02/17-18:30:54.338 bfa0 Compacted 1@1 + 1@2 files => 1966972 bytes
+2026/02/17-18:30:54.342 bfa0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/02/17-18:30:54.342 bfa0 Delete type=2 #178
+2026/02/17-18:30:54.343 bfa0 Delete type=2 #180
+2026/02/17-18:34:17.636 bfa0 Level-0 table #183: started
+2026/02/17-18:34:17.686 bfa0 Level-0 table #183: 1470820 bytes OK
+2026/02/17-18:34:17.689 bfa0 Delete type=0 #179
+2026/02/17-18:35:06.130 bfa0 Compacting 1@1 + 1@2 files
+2026/02/17-18:35:06.183 bfa0 Generated table #184@1: 1831 keys, 2027285 bytes
+2026/02/17-18:35:06.184 bfa0 Compacted 1@1 + 1@2 files => 2027285 bytes
+2026/02/17-18:35:06.184 bfa0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/02/17-18:35:06.185 bfa0 Delete type=2 #181
+2026/02/17-18:35:06.185 bfa0 Delete type=2 #183
+2026/02/17-18:38:05.147 bfa0 Level-0 table #186: started
+2026/02/17-18:38:05.157 bfa0 Level-0 table #186: 518336 bytes OK
+2026/02/17-18:38:05.160 bfa0 Delete type=0 #182
+2026/02/17-18:38:05.165 bfa0 Manual compaction at level-0 from '!actors!0DiO6EJcEBYmbxX7' @ 72057594037927935 : 1 .. '!folders!uEiqdDn2cPBT4Gh5' @ 0 : 0; will stop at (end)
+2026/02/17-18:38:05.166 bfa0 Manual compaction at level-1 from '!actors!0DiO6EJcEBYmbxX7' @ 72057594037927935 : 1 .. '!folders!uEiqdDn2cPBT4Gh5' @ 0 : 0; will stop at '!folders!tx5sSE8ZkP29EOfR' @ 4420 : 1
+2026/02/17-18:38:05.166 bfa0 Compacting 1@1 + 1@2 files
+2026/02/17-18:38:05.226 bfa0 Generated table #187@1: 1847 keys, 2045808 bytes
+2026/02/17-18:38:05.226 bfa0 Compacted 1@1 + 1@2 files => 2045808 bytes
+2026/02/17-18:38:05.229 bfa0 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/02/17-18:38:05.229 bfa0 Delete type=2 #184
+2026/02/17-18:38:05.230 bfa0 Delete type=2 #186
+2026/02/17-18:38:05.242 bfa0 Manual compaction at level-1 from '!folders!tx5sSE8ZkP29EOfR' @ 4420 : 1 .. '!folders!uEiqdDn2cPBT4Gh5' @ 0 : 0; will stop at (end)
